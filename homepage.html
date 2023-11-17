@@ -19,6 +19,7 @@ Last updated: 11/17/23-->
         .title-container {
             text-align: left;
             margin-left: 20px;
+            margin-bottom: 20px;
         }
 
         .title {
@@ -59,6 +60,11 @@ Last updated: 11/17/23-->
 
         .about{
             margin: 10px;
+        }
+
+        .page-body{
+            display: flex;
+            justify-content: space-between;
         }
 
         .latest-reviews {
@@ -134,6 +140,39 @@ Last updated: 11/17/23-->
             font-size: 12px;
         }
 
+        .map-container{
+            margin-right: 50px;
+            margin-left: 20px;
+            width: 835px;
+            height: 563px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+        
+        .nav-bar{
+            position: absolute;
+            margin-right: 50px;
+            width: 775px;
+            height: 85px;
+            background: #4F5D68;
+            display: flex;
+            justify-content: right;
+        }
+
+        .search-bar{
+            align-self: center;
+            padding-left: 20px;            
+            width: 550px;
+            margin-right: 50px;
+            border-radius: 20px;            
+            background-color: white;
+
+            line-height: 40px;
+            color:#4F5D68;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            
+        }
+
     </style>
 </head>
 <body>
@@ -145,43 +184,52 @@ Last updated: 11/17/23-->
             <span class="about">About</span>
         </div>
     </div>
-    <div class="review-container">
-        <div class="latest-reviews">
-            Latest Reviews
+    <div class="page-body">
+        <div class="review-container">
+            <div class="latest-reviews">
+                Latest Reviews
+            </div>
+            <div class="single-review-container">
+                <div class="single-review-container-upper">
+                    <span class="username">
+                        JUNEB
+                    </span>
+                    <span class="room">
+                        PUPIN 428
+                    </span>
+                    <span class="stars">*****</span>
+                </div>
+                <div class="review-content">
+                    as a cane-user, the stairswere difficult to navigate. there are seats i could access on at the top of the ... [more]
+                </div>
+                <div class="review-date">
+                    oct 18th, 2023
+                </div>
+            </div>
+            <br>
+            <div class="single-review-container">
+                <div class="single-review-container-upper">
+                    <span class="username">
+                        DOGLOVER23
+                    </span>
+                    <span class="room">
+                        MUDD 301
+                    </span>
+                    <span class="stars">*****</span>
+                </div>
+                <div class="review-content">
+                    this room is equipped with video recording capabilities andmy professor was amenable to my need for... [more]
+                </div>
+                <div class="review-date">
+                    oct 18th, 2023
+                </div>
+            </div>
         </div>
-        <div class="single-review-container">
-            <div class="single-review-container-upper">
-                <span class="username">
-                    JUNEB
-                </span>
-                <span class="room">
-                    PUPIN 428
-                </span>
-                <span class="stars">*****</span>
-            </div>
-            <div class="review-content">
-                as a cane-user, the stairswere difficult to navigate. there are seats i could access on at the top of the ... [more]
-            </div>
-            <div class="review-date">
-                oct 18th, 2023
-            </div>
-        </div>
-        <br>
-        <div class="single-review-container">
-            <div class="single-review-container-upper">
-                <span class="username">
-                    DOGLOVER23
-                </span>
-                <span class="room">
-                    MUDD 301
-                </span>
-                <span class="stars">*****</span>
-            </div>
-            <div class="review-content">
-                this room is equipped with video recording capabilities andmy professor was amenable to my need for... [more]
-            </div>
-            <div class="review-date">
-                oct 18th, 2023
+        <div class="map-container">
+            <div class="nav-bar">
+                <div class="search-bar">
+                    search: building, room number...
+                </div>
             </div>
         </div>
     </div>
