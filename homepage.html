@@ -1,6 +1,6 @@
 <!-- CU Access Homepage
 COMS 4170, Fall 2023 
-Last updated: 11/17/23-->
+Last updated: 11/20/23-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -163,6 +163,7 @@ Last updated: 11/17/23-->
 
         .write-button{
             padding: 15px;
+            margin-top: 50px;
             border-radius: 20px;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             background-color: #4F5D68;
@@ -173,19 +174,21 @@ Last updated: 11/17/23-->
 
         }
 
-        .nav-container{
+        .nav-container {
             display: flex;
             flex-direction: column;
-
-            width: 80%;
-            margin-left: 30px;
+            width: 600px;
             overflow: hidden;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             background-color: #E4E5E6;
+            position: absolute;
+            left: 1200px;;
+            top: 450px;
+            transform: translate(-50%, -50%);
         }
 
         .nav-bar{
-            min-height: 80px;
+            min-height: 70px;
             background-color: #4F5D68;
             display: flex;
             align-items: center;
@@ -217,10 +220,9 @@ Last updated: 11/17/23-->
             align-self: center;
         }
         
-        .map{
-            background-color: #f08080;
-            max-height: 430px;
-        }
+        /* .map{
+            width: 400px;
+        } */
 
         .footer{
             position: fixed;
@@ -228,7 +230,6 @@ Last updated: 11/17/23-->
             height: 2%;
             width: 100%;
             bottom: 0;
-            margin
         }
 
 
@@ -299,13 +300,12 @@ Last updated: 11/17/23-->
                     <span class="material-symbols-outlined" id="search-button">search</span>
                 </div>
             </div>
-            <div class="map">
-               <img src="campus_map.png" alt="image of campus map">
-            </div>
+            <!-- <div class="map"> -->
+               <!-- <img src="campus_map.png" alt="image of campus map"> -->
+            <iframe src="https://www.google.com/maps/d/embed?mid=1sD9SoCXDvSGc9I0GuEcEKJUwXq0&ehbc=2E312F" width="640" height="480"></iframe>
+            <!-- </div> -->
         </div>
     </div>
     <div class="footer"></div>
 </body>
 </html>
-
-
