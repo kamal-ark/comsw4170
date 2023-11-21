@@ -8,12 +8,12 @@ Last updated: 11/17/23-->
     <title>CU Access</title>
     <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-    <style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <style>
         body {
             background-color: white;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
         }
 
         .title-container {
@@ -47,7 +47,7 @@ Last updated: 11/17/23-->
         .menu{
             justify-content: space-between;
             align-self: flex-start;
-            align-content: flex-end;
+            align-content: center;
 
             font-family: 'Nunito Sans', sans-serif;
             font-size: 20px;
@@ -55,11 +55,20 @@ Last updated: 11/17/23-->
         }
 
         .home{
-            margin: 10px;
+            padding: 10px;
         }
 
         .about{
-            margin: 10px;
+            padding: 10px;
+        }
+        
+        #menu-button{
+            position: relative;
+            font-weight: 350;
+            top: 7px;
+            font-size: 30px;
+            padding: 10px;
+            
         }
 
         .page-body{
@@ -171,7 +180,8 @@ Last updated: 11/17/23-->
             width: 80%;
             margin-left: 30px;
             overflow: hidden;
-            background-color: lightblue;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #E4E5E6;
         }
 
         .nav-bar{
@@ -183,11 +193,15 @@ Last updated: 11/17/23-->
         }
 
         .search-bar{
-            width: 70%;
+            width: 80%;
             margin-right: 20px;
             margin-left: 20px;
-            padding-left: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
             max-height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-content: bottom;
 
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             border-radius: 20px;
@@ -198,13 +212,24 @@ Last updated: 11/17/23-->
             color:#4F5D68;
             
         }
+
+        #search-button{
+            align-self: center;
+        }
         
         .map{
-            background-color: lightcoral;
-            max-height: 450px;
+            background-color: #f08080;
+            max-height: 430px;
         }
 
-
+        .footer{
+            position: fixed;
+            background-color: #4F5D68;
+            height: 2%;
+            width: 100%;
+            bottom: 0;
+            margin
+        }
 
 
     </style>
@@ -216,6 +241,7 @@ Last updated: 11/17/23-->
         <div class="menu">
             <span class="home">Home</span>
             <span class="about">About</span>
+            <span class="material-symbols-outlined" id="menu-button">menu</span>
         </div>
     </div>
     <div class="page-body">
@@ -267,13 +293,19 @@ Last updated: 11/17/23-->
         <div class="nav-container">
             <div class="nav-bar">
                 <div class="search-bar">
-                    search: building, room number...
+                    <i class="search-suggestion">
+                        search: building, room number...
+                    </i>
+                    <span class="material-symbols-outlined" id="search-button">search</span>
                 </div>
             </div>
             <div class="map">
                <img src="campus_map.png" alt="image of campus map">
-        </div>
+            </div>
         </div>
     </div>
+    <div class="footer"></div>
 </body>
 </html>
+
+
