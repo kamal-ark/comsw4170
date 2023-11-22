@@ -1,0 +1,387 @@
+<!-- CU Access Homepage
+COMS 4170, Fall 2023 
+Last updated: 11/17/23-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CU Access</title>
+    <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    
+
+    <style>
+        .body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .title-container {
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            color: white;
+            font-family: 'Lilita One';
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: capitalize;
+            display: inline-block;
+            padding-top: 50px;
+            margin-left: 75px;
+        }
+
+        .subtitle {
+            color: #dbdbdb;
+            font-family: 'Lilita One', sans-serif;
+            font-size: 40px;
+            display: flex;
+            margin-left: 75px;
+        }
+
+        .subtitle2 {
+            color: #dbdbdb;
+            font-family: 'Lilita One', sans-serif;
+            font-size: 23px;
+            font-weight: 100;
+            display: flex;
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+
+        .subtitle3 {
+            color: #dbdbdb;
+            font-family: 'Lilita One', sans-serif;
+            font-size: 18px;
+            display: flow;
+            float: left;
+            margin-left: 80px;
+        }
+
+        .menu{
+            justify-content: space-between;
+            display: inline-block;
+            margin-left: 100px;
+            float: right;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 20px;
+            color: #4F5D68;
+
+        }
+
+        .home{
+            margin: 10px;
+        }
+
+        .about{
+            margin: 10px;
+        }
+
+        #menu-button{
+            position: relative;
+            font-weight: 350;
+            top: 7px;
+            font-size: 30px;
+            padding: 10px;
+            
+        }
+
+        .page-body{
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nontextinput-container {
+            width: 750px;
+            height: 925px;
+            flex-shrink: 0;
+            background: #4F5D68;
+            mix-blend-mode: multiply;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-left: 50px;
+            padding-left: 10px;
+            font-family: 'Nunito Sans', sans-serif;
+            color: white;
+            float: left;
+        }
+
+
+        .dropdown-button1 {
+            color: #aeaeaf;
+            padding: 7.5px;
+            margin: 15px;
+            margin-left: 75px;
+            background-color: #fefefe;
+            width: 450px;
+            font-size: 12px;
+            font-family: 'Nunito Sans', sans-serif;
+            text-align: left;
+        }
+
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-left: 75px;
+            background-color: #6d757d;
+            width: 450px;
+        }
+
+        .dropdown-content1 a {
+            text-decoration: none;
+            color: #fefeef;
+            display: block;
+            margin: 15px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .building-name {
+            font-weight: bolder;
+        }
+
+        .building-numreviews {
+            font-size: 12px;
+            float: right;
+        }
+
+        .dropdown1:hover .dropdown-content1 {display: block;}
+
+        .slider-container {
+        }
+
+        .slider-heading {
+            margin-left: 75px;
+            padding-left: 20px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 900px;
+            font-size: 15px;
+            grid-column: 1;
+        }
+
+        .slider-box {
+            font-size: 12px;
+            margin-left: 75px;
+            margin-right: 225px;
+            padding-right: 20px;
+            display: flex;
+            float: right;
+            align-items: center;
+            text-align: center;
+            grid-column: 2;
+        }
+
+        .slider {
+            padding-right: 10px;
+            padding-left: 10px;
+            text-align: center;
+        }
+
+        .access-stars {
+            display: flex;
+            float: right;
+            padding-right: 20px;
+            margin-right: 225px;
+        }
+
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+
+        .username{
+            text-align: left;
+        }
+
+        
+        .forms{
+            margin-top: 175px;
+            margin-left: 50px;
+            margin-right: 50px;
+            background: white;
+            justify-content: left;
+            align-items: left;
+            float: right;
+            color: black;
+            font-size: 25px;
+            font-family: 'Lilita One', sans-serif;
+            font-weight: bolder;
+        }
+
+        .form1{
+            width: 600px;
+            height: 375px;
+            background: #F4F4F4;
+            justify-content: left;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        
+        .form2{
+            width: 600px;
+            height: 45px;
+            background: #F4F4F4;
+            justify-content: left;
+            margin-top: 20px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .submit-button{
+            padding: 5px;
+            margin-top: 50px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #4F5D68;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Nunito Sans', 'sans-serif';
+            font-size: 20px;
+            color: #F4F4F4;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <div class="menu">
+            <span class="home">Home</span>
+            <span class="about">About</span>
+            <span class="material-symbols-outlined" id="menu-button">menu</span>
+        </div>
+    </div>
+    <div class="page-body">
+        <div class="nontextinput-container">
+            <span class="title">CU Access</span>
+            <span class="subtitle">Room Review</span>
+            <br>
+            <div class="dropdown1">
+                <button class="dropdown-button1">Choose building</button>
+                <div class="dropdown-content1">
+                    <a href="#"> 
+                        <span class="building-name"> Mudd Building </span>
+                        <span class="building-numreviews"> 42 reviews </span>
+                    </a>
+                    <a href="#">
+                        <span class="building-name"> Low Library </span>
+                        <span class="building-numreviews"> 22 reviews </span>
+                    <a href="#">
+                        <span class="building-name"> Uris Building </span>
+                        <span class="building-numreviews"> 12 reviews </span>
+                    </a>
+                    <a href="#">
+                        <span class="building-name"> Wallach Hall </span>
+                        <span class="building-numreviews"> 34 reviews </span>
+                    </a>
+                    <a href="#">
+                        <span class="building-name"> John Jay Hall </span>
+                        <span class="building-numreviews"> 54 reviews </span>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="dropdown1">
+                <button class="dropdown-button1">Choose room</button>
+                <div class="dropdown-content1">
+                    <a href="#"> 404 </a>
+                    <a href="#"> 414 </a>
+                    <a href="#"> 424 </a>
+                    <a href="#"> 434 </a>
+                </div>
+            </div>
+
+
+            <span class="subtitle2">Access Features</span>
+            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading"> Stairs </span>
+                <span class="slider-box"> Few <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Many </span>
+            </div>            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading">Desk Size </span>
+                <span class="slider-box"> Narrow <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Wide </span>
+            </div>            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading"> Speakers </span>
+                <span class="slider-box"> Bad <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Good </span>
+            </div>            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading"> Pathways</span>
+                <span class="slider-box"> Blocked <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Clear </span>
+            </div>            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading"> Doorways </span>
+                <span class="slider-box"> Narrow <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Wide </span>
+            </div>            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading"> Recording </span>
+                <span class="slider-box"> Bad <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Good </span>
+            </div>            <br>
+
+            <div class="slider-containter">
+                <span class="slider-heading"> Crowded </span>
+                <span class="slider-box"> Not <span class="slider">
+                    <input type="range" min="1" max="100" value="50"></span>
+                     Much </span>
+            </div>
+            
+            <br> <br>
+
+            <div>
+            <span class="subtitle3">Access Rating </span>
+            <span class="access-stars"> 
+                <span class="material-symbols-outlined" id="star">star</span>
+                <span class="material-symbols-outlined" id="star">star</span>
+                <span class="material-symbols-outlined" id="star">star</span>
+                <span class="material-symbols-outlined" id="star">star</span>
+                <span class="material-symbols-outlined" id="star">star</span>
+            </span>
+            </div>
+        </div>
+        <div class="forms">
+            Tell Us About Your Access Experience:
+            <div class="form1">
+            </div>
+            Display Name:
+            <div class="form2">
+            </div>
+            <div class="submit-button">
+                Submit
+            </div>
+        </div>
+    </div>
+</body>
+</html>
