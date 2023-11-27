@@ -91,7 +91,7 @@ Last updated: 11/22/23-->
         }
 
         #filled-star{
-            color: gold;
+            color: #D8B70B;
         }
 
         .page-body{
@@ -103,6 +103,10 @@ Last updated: 11/22/23-->
         }
 
         .left-side-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
             min-width: 200px;
             width: 50%;
             padding-right: 50px;
@@ -114,16 +118,13 @@ Last updated: 11/22/23-->
         }
 
         .access-features{
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .single-feature{
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .feature-category{
+            margin-bottom: 8px;
         }
 
         .feature-rating{
@@ -165,6 +166,50 @@ Last updated: 11/22/23-->
             width: 65%;
         }
 
+        .building-info-container{
+            display: flex;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .map{
+            height: 200px;
+            aspect-ratio: 1/.9;
+
+            border: solid;
+            border-color:#F4F4F4;
+            border-width: 2px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .building-info-subcontainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .building-name{
+            font-family: 'Lilita One';
+            font-size: 36px;
+
+        }
+
+        .building-address{
+            flex-grow: 2;
+        }
+
+        .average-rating{
+            display: flex;
+        }
+
+        .average-stars-container{
+            gap: 0px;
+            font-variation-settings: 'FILL' 1, 'wght' 100, 'GRAD' 0, 'opsz' 48;
+        }
+
         .right-side-container{
             min-width: 200px;
             width: 40%;
@@ -202,7 +247,7 @@ Last updated: 11/22/23-->
 
         .single-review-container-upper{
             display: flex;
-            align-items: center;            
+            align-items: flex-end;            
             
             height: 25px;
             margin-left: -10px;
@@ -235,6 +280,7 @@ Last updated: 11/22/23-->
             align-items: center;
             justify-content: flex-end;
             gap: 5px;
+            margin-right: 5px;
 
             text-align: right;
             font-size: 12px;
@@ -264,6 +310,9 @@ Last updated: 11/22/23-->
             margin-top: 20px;
             width: 300px;
             height: 40px;
+            border: solid;
+            border-color: #F4F4F4;
+            border-width: 2px;
             border-radius: 20px;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -343,6 +392,42 @@ Last updated: 11/22/23-->
                         <span class="left-fill-5">Narrow</span>
                         <span>Wide</span>
                     </div>
+                </div>
+                <div class="single-feature">
+                    <div class="feature-category">Recording Capabilities</div>
+                    <div class="feature-rating">
+                        <span class="left-fill-3">Bad</span>
+                        <span>Good</span>
+                    </div>
+                </div>
+                <div class="single-feature">
+                    <div class="feature-category">Filled to capacity</div>
+                    <div class="feature-rating">
+                        <span class="left-fill-3">No</span>
+                        <span>Yes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="building-info-container">
+                <div class="map"></div>
+                <div class="building-info-subcontainer">
+                    <div class="building-name">PUPIN</div>
+                    <div class="building-address">538 W. 120th St.<br>New York, NY 10027</div>
+                    <span class="building-stats">
+                        <div>Number of Rooms: 113</div>
+                        <div>Number of Reviews: 300</div>
+                        <div>Elavator: Yes</div>
+                        <div class="average-rating">
+                            <span>Average Rating:</span>
+                            <div class="average-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </div>
+                        </div>
+                    </span>
                 </div>
             </div>
         </div>
