@@ -1,0 +1,363 @@
+<!-- CU Access Single Room Review Page
+COMS 4170, Fall 2023 
+Last updated: 11/26/23-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CU Access</title>
+    <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito Sans', sans-serif;
+            color: #4F5D68;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .title-container {
+            text-align: left;
+            margin: 20px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .review-content-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .box-features{
+            box-sizing: border-box;
+            word-wrap: break-word;
+            max-width: 400px;
+        }
+
+        .box-text{
+            box-sizing: border-box;
+            word-wrap: break-word;
+            max-width: 600px;
+        }
+
+        .title {
+            color: #4F5D68;
+            font-family: 'Lilita One';
+            font-size: 80px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .menu{
+            justify-content: space-between;
+            align-self: flex-start;
+            align-content: center;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            color: #4F5D68;
+        }
+
+        .home{
+            padding: 10px;
+        }
+
+        .about{
+            padding: 10px;
+        }
+        
+        #menu-button{
+            position: relative;
+            font-weight: 350;
+            top: 7px;
+            font-size: 30px;
+            padding: 10px;
+            
+        }
+
+        .header{
+            background-color: #4F5D68;
+            min-height: 59px;
+            height: 8%;
+            width: 100%;
+            margin-bottom: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            text-transform: uppercase;
+        }
+
+        .room-name{
+            margin-left: 50px;
+
+            font-family: Lilita One;
+            color: #F4F4F4;
+            font-size: 36px;
+        }
+
+        .access-features{
+            margin-top: 10px;
+        }
+
+        .stars-container{
+            margin-right: 50px;
+            color: #F4F4F4;
+            font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 48;
+        }
+
+        #filled-star{
+            color: gold;
+        }
+
+        .page-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 50px;
+            min-height: 100vh;
+        }
+
+        .top-reviews-container{
+            flex-shrink: 0;
+            padding: 75px;
+            background: #F4F4F4;
+            mix-blend-mode: multiply;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            font-family: 'Nunito Sans', sans-serif;
+            padding-bottom: 30px;
+            flex-grow: 1;
+            max-width: 70%;
+            margin: 0 50px;
+        }
+
+        .single-review-container-upper{
+            flex-shrink: 0;
+            padding: 10px;
+            background: rgba(79, 93, 104, 0.10);;
+            mix-blend-mode: multiply;
+            font-family: 'Nunito Sans', sans-serif;
+            padding-bottom: 30px;
+            flex-grow: 1;
+            max-width: 80%;
+            margin: 0 50px;
+        }
+        .single-review-container-lower{
+            flex-shrink: 0;
+            padding: 10px;
+            background: white;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            font-family: 'Nunito Sans', sans-serif;
+            padding-bottom: 30px;
+            flex-grow: 1;
+            max-width: 80%;
+            margin: 0 50px;
+        }
+
+        .single-feature{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .feature-rating{
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid #4F5D68;
+            width: 50%;
+
+            font-size: 12px;
+        }
+
+        .left-fill-1{
+            background-color:#4F5D68;
+            color:#F4F4F4;
+            width: 20%;
+        }
+
+        .left-fill-2{
+            background-color:#4F5D68;
+            color:#F4F4F4;
+            width: 57%;
+        }
+
+        .left-fill-3{
+            background-color:#4F5D68;
+            color:#F4F4F4;
+            width: 80%;
+        }
+
+        .left-fill-4{
+            background-color:#4F5D68;
+            color:#F4F4F4;
+            width: 24%;
+        }
+
+        .left-fill-5{
+            background-color:#4F5D68;
+            color:#F4F4F4;
+            width: 65%;
+        }
+
+        .date {
+            margin-left: auto;
+            font-size: 12px;
+            text-align: right;
+        } 
+
+        .username{
+            flex-grow: 2;
+        }
+
+        .review-stars-container{
+            color: #F4F4F4;
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 48;
+            display: flex;
+            gap: 0px;
+            text-align: right;
+        }
+
+        #filled-star{
+            color: gold;
+        }
+
+        .access-rating-text{
+            color: #4F5D68;
+            font-family: 'Lilita One';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .likes-container{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 5px;
+
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .like-num{
+            margin-left: 10px;
+        }
+
+        .footer{
+            position: fixed;
+            background-color: #4F5D68;
+            height: 2%;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <div class="title">CU Access</div>
+        <div class="menu">
+            <span class="home">Home</span>
+            <span class="about">About</span>
+            <span class="material-symbols-outlined" id="menu-button">menu</span>
+        </div>
+    </div>
+    <div class="header">
+        <div class="room-name">
+            Pupin 428
+        </div>
+        <div class="stars-container">
+            <div class="material-symbols-outlined" id="filled-star">star</div>
+            <div class="material-symbols-outlined" id="filled-star">star</div>
+            <div class="material-symbols-outlined" id="filled-star">star</div>
+            <div class="material-symbols-outlined">star</div>
+            <div class="material-symbols-outlined">star</div>
+        </div>
+    </div>
+    <div class="page-body">          
+        <div class="top-reviews-container">
+            <div class="single-review-container-upper">
+                <span class="username">
+                    AviramRah
+                </span>
+                <span class="date">oct 12, 2023</span>
+            </div>
+            <div class="single-review-container-lower">
+                <div class="review-content-container">
+                    <div class="box-features">
+                        <div class="access-features">
+                            <div class="single-feature">
+                                <div class="feature-category">Stairs</div>
+                                <div class="feature-rating">
+                                    <span class="left-fill-1">Few</span>
+                                    <span>Many</span>
+                                </div>
+                            </div>
+                            <div class="single-feature">
+                                <div class="feature-category">Desk Size</div>
+                                <div class="feature-rating">
+                                    <span class="left-fill-2">Narrow</span>
+                                    <span>Wide</span>
+                                </div>
+                            </div>
+                                <div class="single-feature">
+                                    <div class="feature-category">Microphone/Speaker</div>
+                                    <div class="feature-rating">
+                                        <span class="left-fill-3">Bad</span>
+                                        <span>Good</span>
+                                    </div>
+                                </div>
+                                <div class="single-feature">
+                                    <div class="feature-category">Pathways</div>
+                                    <div class="feature-rating">
+                                        <span class="left-fill-4">Blocked</span>
+                                        <span>Clear</span>
+                                    </div>
+                                </div>
+                                <div class="single-feature">
+                                    <div class="feature-category">Doorways</div>
+                                    <div class="feature-rating">
+                                        <span class="left-fill-5">Narrow</span>
+                                        <span>Wide</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="box-text">
+                        <div class="review-content">
+                            To get in with my wheelchair i needed to go down the elevator to the 4th floor and then ask someone to open the double doors to the lecture hall for me because I couldn’t get them open myself. While there were places for me to sit on the top and bottom rows of the lecture hall, the spaces were not clearly marked and far from where everyone else was sitting. I didn’t like it.
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">18</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">4</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="access-rating-text">
+                    Access Rating
+                </div>
+                <span class="review-stars-container">
+                    <div class="material-symbols-outlined" id="filled-star">star</div>
+                    <div class="material-symbols-outlined">star</div>
+                    <div class="material-symbols-outlined">star</div>
+                    <div class="material-symbols-outlined">star</div>
+                    <div class="material-symbols-outlined">star</div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
