@@ -25,7 +25,7 @@ def addreviewpage():
 
 @app.route('/allreviews')
 def allreviews():
-	return render_template('room_info_page.html')
+	return render_template('all_reviews.html')
 
 
 if __name__ == "__main__":
