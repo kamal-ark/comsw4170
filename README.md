@@ -36,6 +36,7 @@ setting the 'template_home' to be the home directory in the repository.
   Flask server for serving the endpoints with static HTML/CSS webpages
 - homepage.html  
   Home page of the Columbia Access webapp
+  (this page includes an embedded, custom, dynamic map of the Columbia University Morningside Campus created using Google Maps. In lieu of a backend implementation connecting the map to the application at this stage, we used Google Maps' shape-description system to include building access characteristics and a link to our Google Form from our WoZ evaluation)
 - review_add.html  
   Page for input entry of room review and access characteristics
 - room_info_page.html  
