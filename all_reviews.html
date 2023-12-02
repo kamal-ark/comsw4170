@@ -105,13 +105,14 @@ Last updated: 11/29/23-->
         }
         .reviews-header{
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
         }
         .header2{
+            align-items: flex-end;
+            float: left;
             font-family: Lilita One;
-            font-size: 36px;
+            font-size: 48px;
             padding: 10px;
+            margin-left: 470px;
         }
 
         .reviews-list-container {
@@ -119,7 +120,7 @@ Last updated: 11/29/23-->
             height: 500px;
             margin-left: 20px;
             margin-top: 30px;
-            overflow: scroll;
+            overflow: auto;
         }
         .reviews-pair-container {
             padding: 5px;
@@ -142,8 +143,8 @@ Last updated: 11/29/23-->
             padding: 5px;
             padding-bottom: 2px;
             margin: 20px;
-            margin-top: 0px;
-            margin-right: 60px;
+            margin-top: 25px;
+            margin-left: 200px;
 
             border-radius: 30px;
             float: right;
@@ -155,6 +156,20 @@ Last updated: 11/29/23-->
             font-family: 'Lilita One';
             font-size: 20px;
             color: #F4F4F4;
+            height: 23px;
+        }
+
+        .dropdown-group{
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .dropdown-desc{
+            margin-left: 300px;
+            font-size: 18px;
+            color: #7a8188;
+            font-weight: bold;
+            padding-top: 10px;
         }
 
         .dropdown_bg{
@@ -165,6 +180,22 @@ Last updated: 11/29/23-->
             border: none;
         }
 
+
+        ::-webkit-scrollbar {
+          -webkit-appearance: none;
+          width: 20px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 40px;
+            background: #979797;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 40px;
+            background: #f4f4f9;
+            box-shadow: inset 0 0 8px #d2d3e3;
+        }
 
         .single-review-container {
             width: 410px;
@@ -203,14 +234,14 @@ Last updated: 11/29/23-->
             font-weight: bolder;
         }
         .review-stars-container{
-            color: #F4F4F4;
+            color: #cccdce;
             font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 48;
             display: flex;
             gap: 0px;
             text-align: right;
         }
         #filled-star{
-            color: gold;
+            color: #c8ac20;
         }
         .access-rating-text{
             color: #4F5D68;
@@ -262,24 +293,27 @@ Last updated: 11/29/23-->
             <div class="material-symbols-outlined" id="filled-star">star</div>
             <div class="material-symbols-outlined" id="filled-star">star</div>
             <div class="material-symbols-outlined" id="filled-star">star</div>
-            <div class="material-symbols-outlined">star</div>
-            <div class="material-symbols-outlined">star</div>
+            <div class="material-symbols-outlined" id="ustar">star</div>
+            <div class="material-symbols-outlined" id="ustar">star</div>
         </div>
     </div>
     <div class="page-body">
         <div class="all-reviews-container">
             <div class="reviews-header">
-                <div class="header2">
+                <span class="header2">
                     All Reviews
-                </div>
+                </span>
+                <span class="add-review-button">
+                    Add a Review
+                </span>
             </div>
-            <div class="add-review-button">
-                Add a Review
+            <div class="dropdown-group">
+                <span class="dropdown-desc">
+                Sort By: 
+                </span>
+                <button class="dropdown_bg">
+                </button>
             </div>
-            <br>
-            Sort By: 
-            <button class="dropdown_bg">
-            </button>
 
             <div class="reviews-list-container">
             <div class="reviews-pair-container">
@@ -325,7 +359,7 @@ Last updated: 11/29/23-->
                             <span class="date">oct 9, 2023</span>
                         </div>
                         <div class="review-content">
-                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [<a href="/nowhere">more</a>]
                         </div>
                         <div class="likes-container">
                             <span class="like-num">47</span>
@@ -380,7 +414,7 @@ Last updated: 11/29/23-->
                             <span class="date">oct 9, 2023</span>
                         </div>
                         <div class="review-content">
-                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [<a href="/nowhere">more</a>]
                         </div>
                         <div class="likes-container">
                             <span class="like-num">47</span>
@@ -435,7 +469,7 @@ Last updated: 11/29/23-->
                             <span class="date">oct 9, 2023</span>
                         </div>
                         <div class="review-content">
-                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [<a href="/nowhere">more</a>]
                         </div>
                         <div class="likes-container">
                             <span class="like-num">47</span>
@@ -490,7 +524,7 @@ Last updated: 11/29/23-->
                             <span class="date">oct 9, 2023</span>
                         </div>
                         <div class="review-content">
-                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [<a href="/nowhere">more</a>]
                         </div>
                         <div class="likes-container">
                             <span class="like-num">47</span>
@@ -545,7 +579,7 @@ Last updated: 11/29/23-->
                             <span class="date">oct 9, 2023</span>
                         </div>
                         <div class="review-content">
-                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [<a href="/nowhere">more</a>]
                         </div>
                         <div class="likes-container">
                             <span class="like-num">47</span>
