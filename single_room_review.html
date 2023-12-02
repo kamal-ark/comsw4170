@@ -1,12 +1,14 @@
 <!-- CU Access Single Room Review Page
 COMS 4170, Fall 2023
-Last updated: 11/29/23-->
+Last updated: 12/1/23-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>CU Access</title>
     <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <style>
         body {
             background-color: white;
@@ -21,6 +23,7 @@ Last updated: 11/29/23-->
         .title-container {
             text-align: left;
             margin: 20px;
+            margin-left: 40px;
             display: flex;
             align-items: baseline;
             justify-content: space-between;
@@ -150,6 +153,42 @@ Last updated: 11/29/23-->
             width: 50%;
             font-size: 12px;
         }
+        
+        .add-review-button{
+            padding: 5px;
+            margin-bottom: 20px;
+            margin-right: 60px;
+
+            border-radius: 30px;
+            float: right;
+            width: 170px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #4F5D68;
+
+            text-align: center;
+            font-family: 'Lilita One';
+            font-size: 20px;
+            color: #F4F4F4;
+        }
+
+        .back-button {
+            padding: 5px;
+            margin-bottom: 20px;
+            margin-left: 60px;
+
+            border-radius: 30px;
+            float: left;
+            width: 170px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #4F5D68;
+
+            text-align: center;
+            font-family: 'Lilita One';
+            font-size: 20px;
+            color: #F4F4F4;
+        }
+
+
         .left-fill-1{
             background-color:#4F5D68;
             color:#F4F4F4;
@@ -216,7 +255,7 @@ Last updated: 11/29/23-->
         .footer{
             position: fixed;
             background-color: #4F5D68;
-            height: 2%;
+            height: 4%;
             width: 100%;
             bottom: 0;
         }
@@ -245,6 +284,9 @@ Last updated: 11/29/23-->
     </div>
     <div class="page-body">
         <div class="top-reviews-container">
+            <div class="add-review-button">
+                Add a Review
+            </div>
             <div class="single-review-container-upper">
                 <span class="username">
                     AviramRah
@@ -314,6 +356,9 @@ Last updated: 11/29/23-->
                     <div class="material-symbols-outlined">star</div>
                     <div class="material-symbols-outlined">star</div>
                 </span>
+            </div>
+            <div class="back-button">
+                <i style='font-size:24px' class='fas'>&#xf060;</i>
             </div>
         </div>
     </div>
