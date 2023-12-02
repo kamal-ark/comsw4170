@@ -35,7 +35,7 @@ setting the 'template_home' to be the home directory in the repository.
 - server.py  
   Flask server for serving the endpoints with static HTML/CSS webpages
 - homepage.html  
-  Home page of the Columbia Access webapp
+  Home page of the Columbia Access webapp  
   (this page includes an embedded, custom, dynamic map of the Columbia University Morningside Campus created using Google Maps. In lieu of a backend implementation connecting the map to the application at this stage, we used Google Maps' shape-description system to include building access characteristics and a link to our Google Form from our WoZ evaluation)
 - review_add.html  
   Page for input entry of room review and access characteristics
@@ -47,11 +47,13 @@ setting the 'template_home' to be the home directory in the repository.
   Page with all reviews of a specific room, with a scrollbar
 - campus_map.png  
   Campus map image
-- static/rsz_dropbar.png
-  Sort option dropdown bar
+- static/rsz_dropbar.png  
+  Sort option dropdown bar (resized already for faster loading time)
 - static/room_dropbar.png  
-  Select room dropdown image
-- static/blg_dropbar.png
-  Selectt building dropdown image
+  Select room dropdown image  
+- static/blg_dropbar.png  
+  Select building dropdown image
+- static/sbg-bar.png  
+  Dark background with shading, for the slider with texts
 - README.md  
   This readme file
