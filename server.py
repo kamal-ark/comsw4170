@@ -4,9 +4,6 @@ from flask import render_template
 app = Flask(__name__, template_folder='')
 
 @app.route('/')
-def home():
-	return homepage()
-
 @app.route('/home')
 def homepage():
 	return render_template('homepage.html')

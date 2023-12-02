@@ -26,21 +26,6 @@ Last updated: 11/29/23-->
             align-items: baseline;
             justify-content: space-between;
         }
-        .review-content-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        .box-features{
-            box-sizing: border-box;
-            word-wrap: break-word;
-            max-width: 400px;
-        }
-        .box-text{
-            box-sizing: border-box;
-            word-wrap: break-word;
-            max-width: 600px;
-        }
         .title {
             color: #4F5D68;
             font-family: 'Lilita One';
@@ -108,6 +93,7 @@ Last updated: 11/29/23-->
         }
         .all-reviews-container {
             padding: 10px;
+            width: 1200px;
             background: #F4F4F4;
             mix-blend-mode: multiply;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -115,7 +101,7 @@ Last updated: 11/29/23-->
             margin: -50px auto 0 auto;
             position: relative;
             z-index: 2;
-            height: 525px;
+            height: 650px;
         }
         .reviews-header{
             display: flex;
@@ -129,12 +115,34 @@ Last updated: 11/29/23-->
         }
 
         .reviews-list-container {
-            padding: 75px;
+            width: 1100px;
+            height: 500px;
+            margin-left: 20px;
+            margin-top: 30px;
+            overflow: scroll;
+        }
+        .reviews-pair-container {
+            padding: 5px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            width: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 120px;
+        }
+        .reviews-pair-container .left-review{
+            float: left;
+        }
+        .reviews-pair-container .right-review{
+            float: right;
         }
 
         .add-review-button{
             padding: 5px;
+            padding-bottom: 2px;
             margin: 20px;
+            margin-top: 0px;
             margin-right: 60px;
 
             border-radius: 30px;
@@ -149,15 +157,24 @@ Last updated: 11/29/23-->
             color: #F4F4F4;
         }
 
+        .dropdown_bg{
+            background-image: url("{{url_for('static', filename='rsz_dropbar.png')}}");
+            background-size: 500px;
+            width: 500px;
+            height: 45px;
+            border: none;
+        }
+
+
         .single-review-container {
-            width: 94%;
-            height: auto;
+            width: 410px;
+            height: 120px;
             flex-shrink: 0;
-            background-color: #F4F4F4;
+            background-color: white;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            margin-left: 17px;
+            margin-left: 15px;
             margin-right: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding-left: 10px;
         }
         .single-review-container-upper{
@@ -166,60 +183,15 @@ Last updated: 11/29/23-->
             
             height: 25px;
             margin-left: -10px;
-            padding-left: 10px;
+            padding-left: 15px;
             padding-right:10px;
+            padding-top: 2px;
+            padding-bottom: 1px;
 
-            background: #E4E5E6;
+            background: #D9D9D9;
         }
 
-        .single-review-container-lower{
-            flex-shrink: 0;
-            padding: 10px;
-            background: white;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-family: 'Nunito Sans', sans-serif;
-            padding-bottom: 30px;
-            flex-grow: 1;
-            max-width: 80%;
-            margin: 0 50px;
-        }
-        .single-feature{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .feature-rating{
-            display: flex;
-            justify-content: space-between;
-            border: 2px solid #4F5D68;
-            width: 50%;
-            font-size: 12px;
-        }
-        .left-fill-1{
-            background-color:#4F5D68;
-            color:#F4F4F4;
-            width: 20%;
-        }
-        .left-fill-2{
-            background-color:#4F5D68;
-            color:#F4F4F4;
-            width: 57%;
-        }
-        .left-fill-3{
-            background-color:#4F5D68;
-            color:#F4F4F4;
-            width: 80%;
-        }
-        .left-fill-4{
-            background-color:#4F5D68;
-            color:#F4F4F4;
-            width: 24%;
-        }
-        .left-fill-5{
-            background-color:#4F5D68;
-            color:#F4F4F4;
-            width: 65%;
-        }
+
         .date {
             margin-left: auto;
             font-size: 12px;
@@ -227,6 +199,8 @@ Last updated: 11/29/23-->
         }
         .username{
             flex-grow: 2;
+            color: black;
+            font-weight: bolder;
         }
         .review-stars-container{
             color: #F4F4F4;
@@ -247,6 +221,9 @@ Last updated: 11/29/23-->
             line-height: normal;
             text-transform: capitalize;
         }
+        .review-content{
+            padding: 20px 10px 5px 5px;
+        }
         .likes-container{
             display: flex;
             align-items: center;
@@ -254,6 +231,7 @@ Last updated: 11/29/23-->
             gap: 5px;
             text-align: right;
             font-size: 12px;
+            margin-right: 10px;
         }
         .like-num{
             margin-left: 10px;
@@ -294,64 +272,292 @@ Last updated: 11/29/23-->
                 <div class="header2">
                     All Reviews
                 </div>
-
-                <br>
-                Sort By:
             </div>
             <div class="add-review-button">
                 Add a Review
             </div>
+            <br>
+            Sort By: 
+            <button class="dropdown_bg">
+            </button>
 
             <div class="reviews-list-container">
-                <div class="single-review-container">
-                    <div class="single-review-container-upper">
-                        <span class="username">
-                            AviramRah
-                        </span>
-                        <span class="review-stars-container">
-                            <div class="material-symbols-outlined" id="filled-star">star</div>
-                            <div class="material-symbols-outlined">star</div>
-                            <div class="material-symbols-outlined">star</div>
-                            <div class="material-symbols-outlined">star</div>
-                            <div class="material-symbols-outlined">star</div>
-                        </span>
-                        <span class="date">oct 12, 2023</span>
+            <div class="reviews-pair-container">
+                <span class="left-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                AviramRah
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 12, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the desks were way too small for me. I had a hard time getting in and out of them.
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">18</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">4</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
                     </div>
-                    <div class="review-content">
-                        the desks were way too small for me. I had a hard time getting in and out of them.
+                </span>
+                <span class="right-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                NotImpressed
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 9, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">47</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">1</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
                     </div>
-                    <div class="likes-container">
-                        <span class="like-num">18</span>
-                        <span class="material-symbols-outlined">thumb_up</span>
-                        <span class="like-num">4</span>
-                        <span class="material-symbols-outlined">thumb_down</span>
-                    </div>
-                </div>
-                <div class="single-review-container">
-                    <div class="single-review-container-upper">
-                        <span class="username">
-                            NotImpressed
-                        </span>
-                        <span class="review-stars-container">
-                            <div class="material-symbols-outlined" id="filled-star">star</div>
-                            <div class="material-symbols-outlined" id="filled-star">star</div>
-                            <div class="material-symbols-outlined" id="filled-star">star</div>
-                            <div class="material-symbols-outlined">star</div>
-                            <div class="material-symbols-outlined">star</div>
-                        </span>
-                        <span class="date">oct 9, 2023</span>
-                    </div>
-                    <div class="review-content">
-                        the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
-                    </div>
-                    <div class="likes-container">
-                        <span class="like-num">47</span>
-                        <span class="material-symbols-outlined">thumb_up</span>
-                        <span class="like-num">1</span>
-                        <span class="material-symbols-outlined">thumb_down</span>
-                    </div>
-                </div>
+                </span>
             </div>
+
+            <div class="reviews-pair-container">
+                <span class="left-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                AviramRah
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 12, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the desks were way too small for me. I had a hard time getting in and out of them.
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">18</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">4</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+                <span class="right-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                NotImpressed
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 9, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">47</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">1</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+
+            <div class="reviews-pair-container">
+                <span class="left-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                AviramRah
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 12, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the desks were way too small for me. I had a hard time getting in and out of them.
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">18</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">4</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+                <span class="right-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                NotImpressed
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 9, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">47</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">1</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+
+            <div class="reviews-pair-container">
+                <span class="left-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                AviramRah
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 12, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the desks were way too small for me. I had a hard time getting in and out of them.
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">18</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">4</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+                <span class="right-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                NotImpreffssed
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 9, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">47</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">1</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+
+            <div class="reviews-pair-container">
+                <span class="left-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                AviramRah
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 12, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the desks were way too small for me. I had a hard time getting in and out of them.
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">18</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">4</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+                <span class="right-review">
+                    <div class="single-review-container">
+                        <div class="single-review-container-upper">
+                            <span class="username">
+                                NotImpresaaased
+                            </span>
+                            <span class="review-stars-container">
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined" id="filled-star">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined">star</div>
+                            </span>
+                            <span class="date">oct 9, 2023</span>
+                        </div>
+                        <div class="review-content">
+                            the room is equipped with video recording capabilities and my professor was amneble to my need for... [more]
+                        </div>
+                        <div class="likes-container">
+                            <span class="like-num">47</span>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="like-num">1</span>
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+
+        </div>
         </div>
     </div>
     <div class="footer"></div>
