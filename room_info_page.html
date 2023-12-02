@@ -26,7 +26,7 @@ Last updated: 12/01/23-->
         }
 
         .title {
-            color: #4F5D68;
+            color: #6C757D;
             font-family: 'Lilita One';
             font-size: 80px;
             font-style: normal;
@@ -115,6 +115,7 @@ Last updated: 12/01/23-->
         .header2{
             font-family: Lilita One;
             font-size: 36px;
+            color: #6C757D;
         }
 
         .access-features{
@@ -130,8 +131,9 @@ Last updated: 12/01/23-->
         .feature-rating{
             display: flex;
             justify-content: space-between;
-            border: 2px solid #4F5D68;
+            border: 1.5px solid #6C757D;
             width: 50%;
+            padding-right: 5px;
 
             font-size: 12px;
         }
@@ -140,30 +142,35 @@ Last updated: 12/01/23-->
             background-color:#4F5D68;
             color:#F4F4F4;
             width: 20%;
+            padding-left: 5px;
         }
 
         .left-fill-2{
             background-color:#4F5D68;
             color:#F4F4F4;
             width: 57%;
+            padding-left: 5px;
         }
 
         .left-fill-3{
             background-color:#4F5D68;
             color:#F4F4F4;
             width: 80%;
+            padding-left: 5px;
         }
 
         .left-fill-4{
             background-color:#4F5D68;
             color:#F4F4F4;
             width: 24%;
+            padding-left: 5px;
         }
 
         .left-fill-5{
             background-color:#4F5D68;
             color:#F4F4F4;
             width: 65%;
+            padding-left: 5px;
         }
 
         .building-info-container{
@@ -172,11 +179,13 @@ Last updated: 12/01/23-->
             margin-top: 20px;
             margin-bottom: 20px;
             gap: 20px;
+            flex-grow: 5;
         }
 
         .map{
-            height: 200px;
             aspect-ratio: 1/.9;
+            width: 35%;
+            overflow: hidden;
 
             border: solid;
             border-color:#F4F4F4;
@@ -194,7 +203,7 @@ Last updated: 12/01/23-->
         .building-name{
             font-family: 'Lilita One';
             font-size: 36px;
-
+            color: #6C757D;
         }
 
         .building-address{
@@ -208,6 +217,11 @@ Last updated: 12/01/23-->
         .average-stars-container{
             gap: 0px;
             font-variation-settings: 'FILL' 1, 'wght' 100, 'GRAD' 0, 'opsz' 48;
+            color:#a3a3a3;
+        }
+
+        #average-filled-star{
+            color: #4F5D68;
         }
 
         .right-side-container{
@@ -224,6 +238,7 @@ Last updated: 12/01/23-->
             font-family: 'Nunito Sans', sans-serif;
             padding-bottom: 30px;
             flex-grow: .5;
+            height: 72%;
         }
 
         .reviews-header{
@@ -258,6 +273,7 @@ Last updated: 12/01/23-->
         }
 
         .username{
+            font-weight: bolder;
             flex-grow: 2;
         }
 
@@ -409,7 +425,9 @@ Last updated: 12/01/23-->
                 </div>
             </div>
             <div class="building-info-container">
-                <div class="map"></div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/d/u/1/embed?mid=11tCJTBr2zxrZH0B7dPzeg4Ec81hJljE&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                </div>
                 <div class="building-info-subcontainer">
                     <div class="building-name">PUPIN</div>
                     <div class="building-address">538 W. 120th St.<br>New York, NY 10027</div>
@@ -420,10 +438,10 @@ Last updated: 12/01/23-->
                         <div class="average-rating">
                             <span>Average Rating:</span>
                             <div class="average-stars-container">
-                                <div class="material-symbols-outlined" id="filled-star">star</div>
-                                <div class="material-symbols-outlined" id="filled-star">star</div>
-                                <div class="material-symbols-outlined" id="filled-star">star</div>
-                                <div class="material-symbols-outlined">star</div>
+                                <div class="material-symbols-outlined" id="average-filled-star">star</div>
+                                <div class="material-symbols-outlined" id="average-filled-star">star</div>
+                                <div class="material-symbols-outlined" id="average-filled-star">star</div>
+                                <div class="material-symbols-outlined" >star</div>
                                 <div class="material-symbols-outlined">star</div>
                             </div>
                         </div>
