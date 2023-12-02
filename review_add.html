@@ -51,7 +51,7 @@ Last updated: 11/17/23-->
             font-size: 23px;
             font-weight: 100;
             display: flex;
-            margin-left: 80px;
+            margin-left: 100px;
             margin-top: 30px;
         }
 
@@ -184,35 +184,57 @@ Last updated: 11/17/23-->
             width: 500px;
             height: 45px;
             border: none;
-            border-radius: 40px;
             margin-left: 75px;
+            margin-bottom: -15px;
         }
 
         .slider-heading {
-            margin-left: 75px;
-            padding-left: 20px;
-            font-family: 'Nunito Sans', sans-serif;
-            font-weight: 900px;
-            font-size: 15px;
-            grid-column: 1;
+            padding-left: 35px;
+            padding-top: 12.5px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bolder;
+            font-size: 17px;
+            float: left;
+            align-items: center;
         }
 
         .slider-box {
-            font-size: 12px;
-            margin-left: 75px;
-            margin-right: 225px;
-            padding-right: 20px;
-            display: flex;
+            padding-top: 7.5px;
+            padding-right: 50px;
+            font-size: 14px;
             float: right;
-            align-items: center;
             text-align: center;
-            grid-column: 2;
+            color: #E4E5E6;
         }
 
         .slider {
-            padding-right: 10px;
-            padding-left: 10px;
-            text-align: center;
+            -webkit-appearance: none;
+            height: 1px;
+            background: #d9dce0;
+            outline: none;
+            width: 175px;
+            outline: none;
+            margin-top: 18px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12.5px;
+            height: 12.5px;
+            border-radius: 50%;
+            background: #d9d9d9;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #d9d9d9;
+          cursor: pointer;
         }
 
         .access-stars {
@@ -267,16 +289,16 @@ Last updated: 11/17/23-->
         }
 
         .submit-button{
-            padding: 5px;
-            margin-top: 50px;
+            padding: 5px 15px;
+            margin-top: 65px;
             border-radius: 20px;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             background-color: #4F5D68;
             width: 100px;
             text-align: center;
             font-weight: bold;
-            font-family: 'Nunito Sans', 'sans-serif';
-            font-size: 20px;
+            font-family: 'Lilita One', 'sans-serif';
+            font-size: 27px;
             color: #F4F4F4;
             float: right;
         }
@@ -334,52 +356,52 @@ Last updated: 11/17/23-->
             <span class="subtitle2">Access Features</span>
             <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading"> Stairs </span>
-                <span class="slider-box"> Few <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Few
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Many </span>
             </div>            <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading">Desk Size </span>
-                <span class="slider-box"> Narrow <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Narrow
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Wide </span>
             </div>            <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading"> Speakers </span>
-                <span class="slider-box"> Bad <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Bad
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Good </span>
             </div>            <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading"> Pathways</span>
-                <span class="slider-box"> Blocked <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Blocked
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Clear </span>
             </div>            <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading"> Doorways </span>
-                <span class="slider-box"> Narrow <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Narrow
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Wide </span>
             </div>            <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading"> Recording </span>
-                <span class="slider-box"> Bad <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Bad 
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Good </span>
             </div>            <br>
 
-            <div class="slider-containter">
+            <div class="slider-container">
                 <span class="slider-heading"> Crowded </span>
-                <span class="slider-box"> Not <span class="slider">
-                    <input type="range" min="1" max="100" value="50"></span>
+                <span class="slider-box"> Not 
+                    <input type="range" min="1" max="100" value="50" class="slider">
                      Much </span>
             </div>
             
