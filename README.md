@@ -46,5 +46,11 @@ setting the 'template_home' to be the home directory in the repository.
   Page with all reviews of a specific room, with a scrollbar
 - campus_map.png  
   Campus map image
+- static/rsz_dropbar.png
+  Sort option dropdown bar
+- static/room_dropbar.png  
+  Select room dropdown image
+- static/blg_dropbar.png
+  Selectt building dropdown image
 - README.md  
   This readme file

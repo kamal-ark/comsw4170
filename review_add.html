@@ -111,6 +111,27 @@ Last updated: 11/17/23-->
             float: left;
         }
 
+        .dropdown_bg1{
+            background-image: url("{{url_for('static', filename='blg-bar.png')}}");
+            background-size: 500px;
+            width: 500px;
+            height: 45px;
+            border: none;
+            border-radius: 40px;
+            margin-left: 75px;
+            margin-bottom: 30px;
+        }
+
+        .dropdown_bg2{
+            background-image: url("{{url_for('static', filename='room-bar.png')}}");
+            background-size: 500px;
+            width: 500px;
+            height: 45px;
+            border: none;
+            border-radius: 40px;
+            margin-left: 75px;
+        }
+
 
         .dropdown-button1 {
             color: #aeaeaf;
@@ -135,7 +156,7 @@ Last updated: 11/17/23-->
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             margin-left: 75px;
             background-color: #6d757d;
-            width: 450px;
+            width: 500px;
         }
 
         .dropdown-content1 a {
@@ -158,6 +179,13 @@ Last updated: 11/17/23-->
         .dropdown1:hover .dropdown-content1 {display: block;}
 
         .slider-container {
+            background-image: url("{{url_for('static', filename='sbg-bar.png')}}");
+            background-size: 500px;
+            width: 500px;
+            height: 45px;
+            border: none;
+            border-radius: 40px;
+            margin-left: 75px;
         }
 
         .slider-heading {
@@ -192,14 +220,12 @@ Last updated: 11/17/23-->
             float: right;
             padding-right: 20px;
             margin-right: 225px;
+            color: #cccdce;
+            font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 48;
         }
 
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 24
+        #filled-star{
+            color: #c8ac20;
         }
 
         .username{
@@ -270,7 +296,7 @@ Last updated: 11/17/23-->
             <span class="subtitle">Room Review</span>
             <br>
             <div class="dropdown1">
-                <button class="dropdown-button1">Choose building</button>
+                <button class="dropdown_bg1"></button>
                 <div class="dropdown-content1">
                     <a href="#"> 
                         <span class="building-name"> Mudd Building </span>
@@ -295,7 +321,7 @@ Last updated: 11/17/23-->
             </div>
             <br>
             <div class="dropdown1">
-                <button class="dropdown-button1">Choose room</button>
+                <button class="dropdown_bg2"></button>
                 <div class="dropdown-content1">
                     <a href="#"> 404 </a>
                     <a href="#"> 414 </a>
@@ -362,7 +388,7 @@ Last updated: 11/17/23-->
             <div>
             <span class="subtitle3">Access Rating </span>
             <span class="access-stars"> 
-                <span class="material-symbols-outlined" id="star">star</span>
+                <span class="material-symbols-outlined" id="filled-star">star</span>
                 <span class="material-symbols-outlined" id="star">star</span>
                 <span class="material-symbols-outlined" id="star">star</span>
                 <span class="material-symbols-outlined" id="star">star</span>
