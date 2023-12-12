@@ -28,9 +28,11 @@ Last updated: 12/5/23-->
             justify-content: space-between;
         }
         .review-content-container{
+            /* margin-top: 30px; */
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 50px;
+
         }
         .box-features{
             box-sizing: border-box;
@@ -38,6 +40,7 @@ Last updated: 12/5/23-->
             max-width: 400px;
         }
         .box-text{
+            margin-top: 15px;
             box-sizing: border-box;
             word-wrap: break-word;
             max-width: 600px;
@@ -90,7 +93,9 @@ Last updated: 12/5/23-->
             font-size: 36px;
         }
         .access-features{
-            margin-top: 10px;
+            margin-top: 20px;
+            margin-left: 15px;
+            margin-bottom: 40px;
         }
         .stars-container{
             margin-right: 50px;
@@ -114,22 +119,25 @@ Last updated: 12/5/23-->
 
         .top-reviews-container {
             padding: 75px;
-            background: #F4F4F4;
+            /* background: #F4F4F4; */
             mix-blend-mode: multiply;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
             font-family: 'Nunito Sans', sans-serif;
             max-width: 70%;
             margin: -50px auto 0 auto;
             position: relative;
             z-index: 2;
         }
+
         .single-review-container-upper{
+            display: flex;
+            justify-content: space-between;
             flex-shrink: 0;
             padding: 10px;
             background: #e4e5e6;
             mix-blend-mode: multiply;
             font-family: 'Nunito Sans', sans-serif;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
             flex-grow: 1;
             max-width: 80%;
             margin: 0 50px;
@@ -217,27 +225,33 @@ Last updated: 12/5/23-->
         .left-fill-4{
             background-color:#4F5D68;
             color:#F4F4F4;
-            width: 24%;
+            width: 30%;
         }
         .left-fill-5{
             background-color:#4F5D68;
             color:#F4F4F4;
             width: 65%;
         }
+        .username {
+            flex-basis: 48%;
+            text-align: left;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
         .date {
-            margin-left: auto;
-            font-size: 12px;
+            flex-basis: 48%;
             text-align: right;
         }
-        .username{
-            flex-grow: 2;
-        }
+
+
         .review-stars-container{
             color: #cccdce;
             font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 48;
             display: flex;
             gap: 0px;
             text-align: right;
+            margin-left: 10px;
         }
         .access-rating-text{
             color: #4F5D68;
@@ -247,6 +261,7 @@ Last updated: 12/5/23-->
             font-weight: 500;
             line-height: normal;
             text-transform: capitalize;
+            margin-left: 15px;
         }
         .likes-container{
             display: flex;
@@ -255,6 +270,7 @@ Last updated: 12/5/23-->
             gap: 5px;
             text-align: right;
             font-size: 12px;
+            margin-right: 20px;
         }
         .like-num{
             margin-left: 10px;
@@ -322,7 +338,7 @@ Last updated: 12/5/23-->
                                 </div>
                             </div>
                                 <div class="single-feature">
-                                    <div class="feature-category">Microphone/Speaker</div>
+                                    <div class="feature-category">Speaker System</div>
                                     <div class="feature-rating">
                                         <span class="left-fill-3">Bad</span>
                                         <span>Good</span>
@@ -340,6 +356,20 @@ Last updated: 12/5/23-->
                                     <div class="feature-rating">
                                         <span class="left-fill-5">Narrow</span>
                                         <span>Wide</span>
+                                    </div>
+                                </div>
+                                <div class="single-feature">
+                                    <div class="feature-category">Recording Capabilities</div>
+                                    <div class="feature-rating">
+                                        <span class="left-fill-1">Bad</span>
+                                        <span>Good</span>
+                                    </div>
+                                </div>
+                                <div class="single-feature">
+                                    <div class="feature-category">Filled to Capacity</div>
+                                    <div class="feature-rating">
+                                        <span class="left-fill-1">No</span>
+                                        <span>Yes</span>
                                     </div>
                                 </div>
                         </div>
