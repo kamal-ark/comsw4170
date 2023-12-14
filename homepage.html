@@ -273,7 +273,7 @@ Last updated: 12/1/23-->
                         </div>
                     </div>
                     <div class="review-content">
-                        as a cane-user, the stairswere difficult to navigate. there are seats i could access on at the top of the ... [<a href="/nowhere">more</a>]
+                        as a cane-user, the stairswere difficult to navigate. there are seats i could access on at the top of the ... [<a href="/review">more</a>]
                     </div>
                     <div class="review-date">
                         oct 18th, 2023
@@ -298,14 +298,14 @@ Last updated: 12/1/23-->
                         </div>
                     </div>
                     <div class="review-content">
-                        this room is equipped with video recording capabilities andmy professor was amenable to my need for... [<a href="/nowhere">more</a>]
+                        this room is equipped with video recording capabilities andmy professor was amenable to my need for... [<a href="/review">more</a>]
                     </div>
                     <div class="review-date">
                         oct 18th, 2023
                     </div>
                 </div>
             </div>
-            <div class="write-button">
+            <div class="write-button" id="reviewButton">
                 Write a Review
             </div>
         </div>
@@ -322,5 +322,11 @@ Last updated: 12/1/23-->
         </div>
     </div>
     <div class="footer"></div>
+    <script>
+        document.getElementById('reviewButton').addEventListener('click', function() {
+            var newPageUrl = 'http://127.0.0.1:5000/addreview';
+            window.location.href = newPageUrl;
+        });
+    </script>
 </body>
 </html>
