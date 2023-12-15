@@ -112,7 +112,7 @@ Last updated: 11/17/23-->
         }
 
         .dropdown_bg1{
-            background-image: url("{{url_for('static', filename='blg-bar.png')}}");
+            background-image: url("{{url_for('static', filename='empty-bar.png')}}");
             background-size: 500px;
             width: 500px;
             height: 45px;
@@ -120,18 +120,22 @@ Last updated: 11/17/23-->
             border-radius: 40px;
             margin-left: 75px;
             margin-bottom: 30px;
+            color: #6d757d;
+            font-size: 15px;
         }
 
         .dropdown_bg2{
-            background-image: url("{{url_for('static', filename='room-bar.png')}}");
+            background-image: url("{{url_for('static', filename='empty-bar.png')}}");
             background-size: 500px;
             width: 500px;
             height: 45px;
             border: none;
             border-radius: 40px;
             margin-left: 75px;
+            color: #6d757d;
+            font-size: 15px;
+	    z-index: 1;
         }
-
 
         .dropdown-button1 {
             color: #aeaeaf;
@@ -154,18 +158,59 @@ Last updated: 11/17/23-->
             display: none;
             position: absolute;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            margin-left: 75px;
+            margin-top: -30px;
+            margin-left: 100px;
             background-color: #6d757d;
-            width: 500px;
+            width: 450px;
+	        z-index: 2;
         }
 
         .dropdown-content1 a {
             text-decoration: none;
             color: #fefeef;
             display: block;
-            margin: 15px;
+            margin: 2px;
+            padding: 13px;
+            padding-bottom: 3px;
             font-family: 'Nunito Sans', sans-serif;
         }
+
+        .dropdown-content1 a:hover {
+            background-color: #4F5D68;
+        }
+
+        .dropdown1:hover .dropdown-content1 {display: block;}
+
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-left: 100px;
+            background-color: #6d757d;
+            width: 450px;
+            z-index: 2;
+        }
+
+        .dropdown-content2 a {
+            text-decoration: none;
+            color: #fefeef;
+            display: block;
+            margin: 2px;
+            padding: 13px;
+            padding-bottom: 3px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .dropdown-content2 a:hover {
+            background-color: #4F5D68;
+        }
+
+        .dropdown2:hover .dropdown-content2 {display: block;}
 
         .building-name {
             font-weight: bolder;
@@ -176,7 +221,6 @@ Last updated: 11/17/23-->
             float: right;
         }
 
-        .dropdown1:hover .dropdown-content1 {display: block;}
 
         .slider-container {
             background-image: url("{{url_for('static', filename='sbg-bar.png')}}");
@@ -318,37 +362,43 @@ Last updated: 11/17/23-->
             <span class="subtitle">Room Review</span>
             <br>
             <div class="dropdown1">
-                <button class="dropdown_bg1"></button>
+                <button class="dropdown_bg1" id="dropdown-id1"> Choose building</button>
                 <div class="dropdown-content1">
-                    <a href="#"> 
+                    <a value="Mudd Building" onclick="emptyDropdownBar1(this)"> 
                         <span class="building-name"> Mudd Building </span>
                         <span class="building-numreviews"> 42 reviews </span>
                     </a>
-                    <a href="#">
+                    <a value="Pupin Building" onclick="emptyDropdownBar1(this)"> 
+                        <span class="building-name"> Pupin Building </span>
+                        <span class="building-numreviews"> 53 reviews </span>
+                    </a>
+                    <a value="Low Library" onclick="emptyDropdownBar1(this)"> 
                         <span class="building-name"> Low Library </span>
                         <span class="building-numreviews"> 22 reviews </span>
-                    <a href="#">
+                    </a>
+                    <a value="Uris Building" onclick="emptyDropdownBar1(this)"> 
                         <span class="building-name"> Uris Building </span>
                         <span class="building-numreviews"> 12 reviews </span>
                     </a>
-                    <a href="#">
+                    <a value="Wallach Hall" onclick="emptyDropdownBar1(this)"> 
                         <span class="building-name"> Wallach Hall </span>
                         <span class="building-numreviews"> 34 reviews </span>
                     </a>
-                    <a href="#">
+                    <a value="John Jay Hall" onclick="emptyDropdownBar1(this)"> 
                         <span class="building-name"> John Jay Hall </span>
                         <span class="building-numreviews"> 54 reviews </span>
                     </a>
                 </div>
             </div>
             <br>
-            <div class="dropdown1">
-                <button class="dropdown_bg2"></button>
-                <div class="dropdown-content1">
-                    <a href="#"> 404 </a>
-                    <a href="#"> 414 </a>
-                    <a href="#"> 424 </a>
-                    <a href="#"> 434 </a>
+            <div class="dropdown2">
+                <button class="dropdown_bg2" id="dropdown-id2">Choose room</button>
+                <div class="dropdown-content2">
+                    <a value="301"  onclick="emptyDropdownBar2(this)"> 301 </a>
+                    <a value="404"  onclick="emptyDropdownBar2(this)"> 404 </a>
+                    <a value="414"  onclick="emptyDropdownBar2(this)"> 414 </a>
+                    <a value="424"  onclick="emptyDropdownBar2(this)"> 424 </a>
+                    <a value="434"  onclick="emptyDropdownBar2(this)"> 434 </a>
                 </div>
             </div>
 
@@ -435,6 +485,23 @@ Last updated: 11/17/23-->
             var newPageUrl = 'http://127.0.0.1:5000/home';
             window.location.href = newPageUrl;
         });
+
+
+        function emptyDropdownBar1(elem) {
+            var dropDownButton1 = document.getElementById("dropdown-id1");
+            dropDownButton1.innerText = elem.getAttribute("value");
+            /*const style_new2 = {
+                color: "gold" 
+            }
+            Object.assign(elem.style, style_new2);*/
+            //elem.style.color = "gold";
+        }
+
+        function emptyDropdownBar2(elem) {
+            var dropDownButton2 = document.getElementById("dropdown-id2");
+            dropDownButton2.innerText = elem.getAttribute("value");
+        }
+
     </script>
 </body>
 </html>
