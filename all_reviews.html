@@ -1,6 +1,6 @@
 <!-- CU Access Single Room Review Page
 COMS 4170, Fall 2023
-Last updated: 11/29/23-->
+Last updated: 12/15/23-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +68,7 @@ Last updated: 11/29/23-->
             align-items: center;
             text-transform: uppercase;
         }
-        .header-title{
+        .room-name{
             margin-left: 50px;
             font-family: Lilita One;
             color: #F4F4F4;
@@ -163,6 +163,9 @@ Last updated: 11/29/23-->
             font-size: 20px;
             color: #F4F4F4;
             height: 23px;
+        }
+        .add-review-button:hover {
+        background-color: #747F87;
         }
 
         .dropdown-group{
@@ -266,7 +269,6 @@ Last updated: 11/29/23-->
         .review-content{
             padding: 15px 15px 5px 5px;
             overflow: hidden;
-            white-space: pre-line;
             text-overflow: ellipsis;
             height: 40px;
         }
@@ -311,8 +313,8 @@ Last updated: 11/29/23-->
         </div>
     </div>
     <div class="header">
-        <div class="header-title">
-            All Reviews
+        <div class="room-name">
+            Pupin 428
         </div>
         <div class="stars-container">
             <div class="material-symbols-outlined" id="filled-star">star</div>
@@ -326,9 +328,9 @@ Last updated: 11/29/23-->
         <div class="all-reviews-container">
             <div class="reviews-header">
                 <span class="header2">
-                    Pupin 428
+                    All Reviews
                 </span>
-                <span class="add-review-button">
+                <span class="add-review-button" id="reviewButton">
                     Add a Review
                 </span>
             </div>
@@ -345,5 +347,11 @@ Last updated: 11/29/23-->
         </div>
     </div>
     <div class="footer"></div>
+    <script>
+        document.getElementById('reviewButton').addEventListener('click', function() {
+            var newPageUrl = 'http://127.0.0.1:5000/addreview';
+            window.location.href = newPageUrl;
+        });
+    </script>
 </body>
 </html>
