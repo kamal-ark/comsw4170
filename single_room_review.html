@@ -80,7 +80,6 @@ Last updated: 12/5/23-->
             min-height: 59px;
             height: 8%;
             width: 100%;
-            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -110,23 +109,36 @@ Last updated: 12/5/23-->
         }
         .page-body {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 0 50px;
-            padding-top: 50px;
-            position: relative;
+            flex-direction: column;
+            flex-grow: 2;
+            align-items: center;
+            background-color: #D9D9D9;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .add-review-button{
+            border-radius: 30px;
+            height: 30px;
+            width: 170px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #4F5D68;
+            align-self: flex-end;
+            margin-right: 10%;
+
+            text-align: center;
+            font-family: 'Lilita One';
+            font-size: 20px;
+            line-height: 30px;
+            color: #F4F4F4;
         }
 
         .top-reviews-container {
-            padding: 75px;
-            /* background: #F4F4F4; */
-            mix-blend-mode: multiply;
-            /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
             font-family: 'Nunito Sans', sans-serif;
-            max-width: 70%;
-            margin: -50px auto 0 auto;
-            position: relative;
+            max-width: 80%;
             z-index: 2;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
+            background-color: white;
         }
 
         .single-review-container-upper{
@@ -139,8 +151,6 @@ Last updated: 12/5/23-->
             font-family: 'Nunito Sans', sans-serif;
             padding-bottom: 10px;
             flex-grow: 1;
-            max-width: 80%;
-            margin: 0 50px;
         }
         .single-review-container-lower{
             flex-shrink: 0;
@@ -150,8 +160,6 @@ Last updated: 12/5/23-->
             font-family: 'Nunito Sans', sans-serif;
             padding-bottom: 30px;
             flex-grow: 1;
-            max-width: 80%;
-            margin: 0 50px;
         }
         .single-feature{
             display: flex;
@@ -164,46 +172,6 @@ Last updated: 12/5/23-->
             border: 2px solid #4F5D68;
             width: 50%;
             font-size: 12px;
-        }
-        
-        .add-review-button{
-            position: absolute;
-            top: 20px;
-            right: 20%;
-            padding: 5px;
-            margin-bottom: 20px;
-            margin-right: 60px;
-
-            border-radius: 30px;
-            float: right;
-            width: 170px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            background-color: #4F5D68;
-
-            text-align: center;
-            font-family: 'Lilita One';
-            font-size: 20px;
-            color: #F4F4F4;
-        }
-
-        .back-button {
-            position: absolute;
-            top: 86%;
-            left: 11%;
-            padding: 5px;
-            margin-bottom: 20px;
-            margin-right: 60px;
-
-            border-radius: 30px;
-            float: right;
-            width: 170px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            background-color: #4F5D68;
-
-            text-align: center;
-            font-family: 'Lilita One';
-            font-size: 20px;
-            color: #F4F4F4;
         }
 
 
@@ -275,6 +243,23 @@ Last updated: 12/5/23-->
         .like-num{
             margin-left: 10px;
         }
+
+        .back-button {
+        border-radius: 30px;
+        width: 100px;
+        height: 30px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-color: #4F5D68;
+        align-self: flex-start;
+        margin-left: 10%;
+
+        text-align: center;
+        font-family: 'Lilita One';
+        font-size: 24px;
+        line-height: 30px;
+        color: #F4F4F4;
+        }
+
         .footer{
             position: fixed;
             background-color: #4F5D68;
@@ -397,9 +382,9 @@ Last updated: 12/5/23-->
                     <div class="material-symbols-outlined">star</div>
                 </span>
             </div>
-            <div class="back-button">
-                <i style='font-size:24px' class='fas'>&#xf060;</i>
-            </div>
+        </div>
+        <div class="back-button">
+            <span class="material-symbols-outlined">keyboard_backspace</span>
         </div>
     </div>
     <div class="footer"></div>
