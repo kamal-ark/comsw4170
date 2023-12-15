@@ -474,11 +474,9 @@ Last updated: 11/17/23-->
         </div>
         <div class="forms">
             Tell Us About Your Access Experience:
-            <div class="form1">
-            </div>
+            <input type="text" class="form1" name="review" id="review-text">
             Display Name:
-            <div class="form2">
-            </div>
+            <input type="text" class="form2" name="user" id="user-name">
             <div class="submit-button" id="reviewButton">
                 Submit
             </div>
@@ -486,9 +484,45 @@ Last updated: 11/17/23-->
     </div>
     <script>
         document.getElementById('reviewButton').addEventListener('click', function() {
-            var newPageUrl = 'http://127.0.0.1:5000/allreviews';
-            window.location.href = newPageUrl;
+
+            var review_text = document.getElementById("review-text").value;
+            var user_name = document.getElementById('user-name').value;
+            postReview(review_text, user_name)
         });
+
+        function postReview(review, user) {
+            var review_body = {
+                "user": user,
+                "date": "dec. 19th, 2023",
+                "stars": "2",
+                "thumbs_up": "0",
+                "thumbs_down": "0",
+                "review_text": review,
+            }
+
+            alert(JSON.stringify(review_body))
+
+            $.ajax({
+                type: "POST",
+                url: "http://127.0.0.1:5000/post_review",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data : JSON.stringify(review_body),
+                success: function(result) {
+                    alert("fafs")
+                    //var newPageUrl = 'http://127.0.0.1:5000/allreviews';
+                    //window.location.href = newPageUrl;
+                },
+                error: function(request, status, error) {
+                    console.log("Error");
+                    console.log(request)
+                    console.log(status)
+                    console.log(error)
+                }
+            });
+
+            alert("asfsfs")
+        }
 
 
         function emptyDropdownBar1(elem) {

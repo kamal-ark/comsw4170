@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import render_template
+from flask import Response, request, jsonify
+
 # Set template folder to folder with HTML files
 app = Flask(__name__, template_folder='')
 
@@ -23,7 +25,7 @@ reviews_data = [
 	"stars": "3",
 	"thumbs_up": "2",
 	"thumbs_down": "26",
-	"review_text": "this room is equipped with video recording capabilities and my professor was amenable to my need for... "
+	"review_text": "this room is equipped with video recording capabilities and my professor was amenable to my need for more access needs "
 },
 
 {
@@ -33,7 +35,7 @@ reviews_data = [
 	"stars": "2",
 	"thumbs_up": "24",
 	"thumbs_down": "3",
-	"review_text": "we had in class activities and i could not get around the classroom because of all the stairs so that made... "
+	"review_text": "we had in class activities and i could not get around the classroom because of all the stairs so that made everything tough for me "
 },
 
 {
@@ -64,7 +66,7 @@ reviews_data = [
 	"stars": "1",
 	"thumbs_up": "12",
 	"thumbs_down": "0",
-	"review_text": "to get in with my wheelchair i needed to go down the elevator to the 4th floor and then ask someon... "
+	"review_text": "to get in with my wheelchair i needed to go down the elevator to the 4th floor and then ask someone to help me. this was bad "
 },
 
 {
@@ -84,7 +86,7 @@ reviews_data = [
 	"stars": "3",
 	"thumbs_up": "24",
 	"thumbs_down": "23",
-	"review_text": "Not a good class for any purposes. Maybe do not enroll in any course that teaches here..."
+	"review_text": "Not a good class for any purpose. Maybe do not enroll in any course that teaches here..."
 },
 
 {
@@ -118,6 +120,7 @@ reviews_data = [
 },
 ]
 
+current_id = 9
 
 @app.route('/')
 @app.route('/home')
@@ -140,6 +143,27 @@ def addreviewpage():
 def allreviews():
 	return render_template('all_reviews.html', reviews_data=reviews_data)
 
+@app.route('/post_review', methods=['GET','POST'])
+def post_review():
+	print(request.get_json())
+	global reviews_data
+	global current_id
+
+	review_json = request.get_json()
+	review_text = review_json["review_text"]
+	user = review_json["user"]
+
+
+	current_id += 1
+	new_id = current_id
+	new_review = {
+		"id": current_id,
+		"user": user,
+		"review_text": review_text,
+	}
+	reviews_data.append(new_review)
+
+	return jsonify(reviews_data=reviews_data)
 
 if __name__ == "__main__":
 	app.run(debug=True)
