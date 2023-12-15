@@ -290,9 +290,14 @@ Last updated: 11/17/23-->
             font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 48;
         }
 
-        #filled-star{
+        .star:hover,
+        .star.clicked {
             color: #c8ac20;
-        }
+    }
+
+        /* #filled-star{
+            color: #c8ac20;
+        } */
 
         .username{
             text-align: left;
@@ -467,12 +472,12 @@ Last updated: 11/17/23-->
 
             <div>
             <span class="subtitle3">Access Rating </span>
-            <span class="access-stars"> 
-                <span class="material-symbols-outlined" id="filled-star">star</span>
-                <span class="material-symbols-outlined" id="star">star</span>
-                <span class="material-symbols-outlined" id="star">star</span>
-                <span class="material-symbols-outlined" id="star">star</span>
-                <span class="material-symbols-outlined" id="star">star</span>
+            <span class="access-stars">
+                <span class="material-symbols-outlined star" data-rating="1">star</span>
+                <span class="material-symbols-outlined star" data-rating="2">star</span>
+                <span class="material-symbols-outlined star" data-rating="3">star</span>
+                <span class="material-symbols-outlined star" data-rating="4">star</span>
+                <span class="material-symbols-outlined star" data-rating="5">star</span>
             </span>
             </div>
         </div>
@@ -516,6 +521,53 @@ Last updated: 11/17/23-->
             // NEED TO ADD LOGIC HERE
             alert("Experience: " + experienceText + "\nDisplay Name: " + displayName);
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(function (star) {
+            star.addEventListener('mouseover', function () {
+                highlightStars(parseInt(star.getAttribute('data-rating')));
+            });
+
+            star.addEventListener('mouseout', function () {
+                resetStars();
+            });
+
+            star.addEventListener('click', function () {
+                setRating(parseInt(star.getAttribute('data-rating')));
+            });
+        });
+    });
+
+    function highlightStars(rating) {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(function (star, index) {
+            if (index < rating) {
+                star.classList.add('hovered');
+            } else {
+                star.classList.remove('hovered');
+            }
+        });
+    }
+
+    function resetStars() {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(function (star) {
+            star.classList.remove('hovered');
+        });
+    }
+
+    function setRating(rating) {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(function (star, index) {
+            if (index < rating) {
+                star.classList.add('clicked');
+            } else {
+                star.classList.remove('clicked');
+            }
+        });
+    }
 
     </script>
 </body>
