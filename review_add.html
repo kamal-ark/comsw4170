@@ -331,6 +331,11 @@ Last updated: 11/17/23-->
             margin-top: 20px;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
+        
+        label {
+        display: block;
+        margin-top: 10px;
+        }
 
         .submit-button{
             padding: 5px 15px;
@@ -472,13 +477,13 @@ Last updated: 11/17/23-->
             </div>
         </div>
         <div class="forms">
-            Tell Us About Your Access Experience:
-            <div class="form1">
-            </div>
-            Display Name:
-            <div class="form2">
-            </div>
-            <div class="submit-button" id="reviewButton">
+            <label for="experience">Tell Us About Your Experience:</label>
+            <textarea id="experience" class="form1" rows="10" cols="70"></textarea>
+        
+            <label for="displayName">Display Name:</label>
+            <input type="text" id="displayName" class="form2">
+        
+            <div class="submit-button" id="reviewButton" onclick="submitForm()">
                 Submit
             </div>
         </div>
@@ -503,6 +508,13 @@ Last updated: 11/17/23-->
         function emptyDropdownBar2(elem) {
             var dropDownButton2 = document.getElementById("dropdown-id2");
             dropDownButton2.innerText = elem.getAttribute("value");
+        }
+
+        function submitForm() {
+            var experienceText = document.getElementById('experience').value;
+            var displayName = document.getElementById('displayName').value;
+            // NEED TO ADD LOGIC HERE
+            alert("Experience: " + experienceText + "\nDisplay Name: " + displayName);
         }
 
     </script>
