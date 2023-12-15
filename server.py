@@ -39,7 +39,7 @@ reviews_data = [
 {
 	"id": 2,
 	"user": "Yallarenice",
-	"date": "oct. 12th, 2023",
+	"date": "oct. 9th, 2023",
 	"stars": "2",
 	"thumbs_up": "2",
 	"thumbs_down": "0",
@@ -50,7 +50,7 @@ reviews_data = [
 {
 	"id": 3,
 	"user": "QueenC",
-	"date": "oct. 12th, 2023",
+	"date": "oct. 10th, 2023",
 	"stars": "3",
 	"thumbs_up": "1",
 	"thumbs_down": "3",
@@ -60,7 +60,7 @@ reviews_data = [
 {
 	"id": 4,
 	"user": "Peaceandlove",
-	"date": "oct. 11th, 2023",
+	"date": "oct. 10th, 2023",
 	"stars": "1",
 	"thumbs_up": "12",
 	"thumbs_down": "0",
@@ -70,7 +70,7 @@ reviews_data = [
 {
 	"id": 5,
 	"user": "Nickname",
-	"date": "oct. 10th, 2023",
+	"date": "oct. 11th, 2023",
 	"stars": "2",
 	"thumbs_up": "2",
 	"thumbs_down": "26",
@@ -80,7 +80,7 @@ reviews_data = [
 {
 	"id": 6,
 	"user": "Anonymous",
-	"date": "oct. 10th, 2023",
+	"date": "oct. 12th, 2023",
 	"stars": "3",
 	"thumbs_up": "24",
 	"thumbs_down": "23",
@@ -90,7 +90,7 @@ reviews_data = [
 {
 	"id": 7,
 	"user": "Notwrong",
-	"date": "oct. 9th, 2023",
+	"date": "oct. 12th, 2023",
 	"stars": "3",
 	"thumbs_up": "45",
 	"thumbs_down": "1",
@@ -100,7 +100,7 @@ reviews_data = [
 {
 	"id": 8,
 	"user": "AviViva",
-	"date": "dec. 24th, 2023",
+	"date": "dec. 23rd, 2023",
 	"stars": "5",
 	"thumbs_up": "24",
 	"thumbs_down": "1",
@@ -110,7 +110,7 @@ reviews_data = [
 {
 	"id": 9,
 	"user": "FloKi",
-	"date": "dec. 23rd, 2023",
+	"date": "dec. 24th, 2023",
 	"stars": "4",
 	"thumbs_up": "18",
 	"thumbs_down": "0",

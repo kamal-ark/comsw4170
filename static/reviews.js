@@ -2,23 +2,43 @@
 function renderReviews(reviews_data) {
 	$("#reviews-list").empty()
 
-	$.each(reviews_data, function(i, review_data){
+	var data_len = reviews_data.length
+	var reverse_order = true
+	var i = 0
+
+	for(j = 0; j<data_len; j++){
 		// Add two reviews each to a review pair container
-		if((i % 2) == 1){
-			renderReview(review_data, true, pair_container)
+		if(reverse_order)
+			i = data_len-j-1
+		else
+			i = j
+		review_data = reviews_data[i]
+		if((j % 2) == 1){
+			renderReview(review_data, true, pair_container, false)
 			//alert(review_data['user'])
 		}
 		else{
 			pair_container = $("<div class='reviews-pair-container'>")
-			pair_container = renderReview(review_data, false, pair_container)
+			pair_container = renderReview(review_data, false, pair_container, false)
 		}
-	})
+	}
+	// For odd number of reviews
+	if(data_len%2 == 1){
+		renderReview([], true, pair_container, true)
+	}
 
 	alert("no probs")
 }
 
 // is_right is a Boolean value for displaying in the right handside
-function renderReview(review_data, is_right, review_pair_container) {
+function renderReview(review_data, is_right, review_pair_container, is_final) {
+	if(is_final){
+		side_review = $("<span class='right-review'>")
+		$(review_pair_container).append(side_review)
+		$("#reviews-list").append(review_pair_container)
+		return
+	}
+
 	var side_review = ""
 	if(is_right)
 		side_review = $("<span class='right-review'>")
