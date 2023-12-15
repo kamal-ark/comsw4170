@@ -121,9 +121,7 @@ Last updated: 11/17/23-->
             margin-left: 75px;
             margin-bottom: 30px;
             color: #6d757d;
-            font-size: 17px;
-            font-family: 'Didact Gothic', sans-serif;
-            font-weight: 100;
+            font-size: 15px;
         }
 
         .dropdown_bg2{
@@ -135,9 +133,7 @@ Last updated: 11/17/23-->
             border-radius: 40px;
             margin-left: 75px;
             color: #6d757d;
-            font-size: 17px;
-            font-family: 'Didact Gothic', sans-serif;
-            font-weight: 100;
+            font-size: 15px;
 	    z-index: 1;
         }
 
@@ -350,6 +346,9 @@ Last updated: 11/17/23-->
             color: #F4F4F4;
             float: right;
         }
+        .submit-button:hover {
+        background-color: #747F87;
+        }
     </style>
 </head>
 <body>
@@ -366,7 +365,7 @@ Last updated: 11/17/23-->
             <span class="subtitle">Room Review</span>
             <br>
             <div class="dropdown1">
-                <button class="dropdown_bg1" id="dropdown-id1"> choose building</button>
+                <button class="dropdown_bg1" id="dropdown-id1"> Choose building</button>
                 <div class="dropdown-content1">
                     <a value="Mudd Building" onclick="emptyDropdownBar1(this)"> 
                         <span class="building-name"> Mudd Building </span>
@@ -396,7 +395,7 @@ Last updated: 11/17/23-->
             </div>
             <br>
             <div class="dropdown2">
-                <button class="dropdown_bg2" id="dropdown-id2">choose room</button>
+                <button class="dropdown_bg2" id="dropdown-id2">Choose room</button>
                 <div class="dropdown-content2">
                     <a value="301"  onclick="emptyDropdownBar2(this)"> 301 </a>
                     <a value="404"  onclick="emptyDropdownBar2(this)"> 404 </a>
@@ -474,9 +473,11 @@ Last updated: 11/17/23-->
         </div>
         <div class="forms">
             Tell Us About Your Access Experience:
-            <input type="text" class="form1" name="review" id="review-text">
+            <div class="form1">
+            </div>
             Display Name:
-            <input type="text" class="form2" name="user" id="user-name">
+            <div class="form2">
+            </div>
             <div class="submit-button" id="reviewButton">
                 Submit
             </div>
@@ -484,45 +485,9 @@ Last updated: 11/17/23-->
     </div>
     <script>
         document.getElementById('reviewButton').addEventListener('click', function() {
-
-            var review_text = document.getElementById("review-text").value;
-            var user_name = document.getElementById('user-name').value;
-            postReview(review_text, user_name)
+            var newPageUrl = 'http://127.0.0.1:5000/allreviews';
+            window.location.href = newPageUrl;
         });
-
-        function postReview(review, user) {
-            var review_body = {
-                "user": user,
-                "date": "dec. 19th, 2023",
-                "stars": "2",
-                "thumbs_up": "0",
-                "thumbs_down": "0",
-                "review_text": review,
-            }
-
-            alert(JSON.stringify(review_body))
-
-            $.ajax({
-                type: "POST",
-                url: "http://127.0.0.1:5000/post_review",
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
-                data : JSON.stringify(review_body),
-                success: function(result) {
-                    alert("fafs")
-                    //var newPageUrl = 'http://127.0.0.1:5000/allreviews';
-                    //window.location.href = newPageUrl;
-                },
-                error: function(request, status, error) {
-                    console.log("Error");
-                    console.log(request)
-                    console.log(status)
-                    console.log(error)
-                }
-            });
-
-            alert("asfsfs")
-        }
 
 
         function emptyDropdownBar1(elem) {
