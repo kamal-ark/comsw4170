@@ -1,6 +1,6 @@
 <!-- CU Access Room Info Page
 COMS 4170, Fall 2023 
-Last updated: 12/01/23-->
+Last updated: 12/15/23-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -325,6 +325,9 @@ Last updated: 12/01/23-->
             font-size: 24px;
             color: #F4F4F4;
         }
+        .add-review-button:hover {
+        background-color: #747F87;
+        }
 
         .accomodation-button{
             margin: auto;
@@ -340,7 +343,10 @@ Last updated: 12/01/23-->
             line-height: 40px;
             text-align: center;
             font-size: 14px;
-
+        }
+        .accomodation-button:hover {
+        background-color: #747F87;
+        color: white;
         }
 
         .footer{
@@ -511,15 +517,26 @@ Last updated: 12/01/23-->
                         <span class="material-symbols-outlined">thumb_down</span>
                     </div>
                 </div>
-                <div class="add-review-button">
+                <div class="add-review-button" id="reviewButton">
                     Add a Review
                 </div>
             </div>
-            <div class="accomodation-button">
+            <div class="accomodation-button" id="accomodationRequest">
                 How To Request Accomodations
             </div>
         </div>
     </div>
     <div class="footer"></div>
+    <script>
+        document.getElementById('reviewButton').addEventListener('click', function() {
+            var newPageUrl = 'http://127.0.0.1:5000/addreview';
+            window.location.href = newPageUrl;
+        });
+
+        document.getElementById('accomodationRequest').addEventListener('click', function() {
+            var newPageUrl = 'https://www.health.columbia.edu/services/register-disability-services';
+            window.location.href = newPageUrl;
+        });
+    </script>
 </body>
 </html>
