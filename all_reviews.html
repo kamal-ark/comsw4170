@@ -178,21 +178,21 @@ Last updated: 11/29/23-->
         }
 
 
-        /* .reviews-list-container::-webkit-scrollbar {
+         ::-webkit-scrollbar {
           -webkit-appearance: none;
           width: 20px;
         }
 
-        .reviews-list-container::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb {
             border-radius: 40px;
             background: #979797;
         }
 
-        .reviews-list-container::-webkit-scrollbar-track {
+        ::-webkit-scrollbar-track {
             border-radius: 40px;
             background: #f4f4f9;
             box-shadow: inset 0 0 8px #d2d3e3;
-        } */
+        } 
 
         .single-review-container {
             width: 410px;
@@ -253,7 +253,10 @@ Last updated: 11/29/23-->
             text-transform: capitalize;
         }
         .review-content{
-            padding: 20px 10px 5px 5px;
+            padding: 15px 15px 5px 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 40px;
         }
         .likes-container{
             display: flex;
@@ -263,6 +266,7 @@ Last updated: 11/29/23-->
             text-align: right;
             font-size: 12px;
             margin-right: 10px;
+            margin-top: 5px;
         }
         .like-num{
             margin-left: 10px;

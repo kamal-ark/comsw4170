@@ -28,22 +28,46 @@ function renderReview(review_data, is_right, review_pair_container) {
 	var single_review = $("<div class='single-review-container'>")
 	var review_upper = $("<div class='single-review-container-upper'>")
 	var name = $("<span class='username'>")
+	var stars = $("<span class='review-stars-container'>")
 	// TODO stars
 	var date = $("<span class='date'>")
 
 	var content = $("<div class='review-content'>")
-	// TODO likes
+	var likes_div = $("<div class='likes-container'>")
+	var likes = $("<span class='like-num'>")
+	var thumbs_up = $("<span class='material-symbols-outlined'>")
+	var dislikes = $("<span class='like-num'>")
+	var thumbs_down = $("<span class='material-symbols-outlined'>")
 
 
 	$(name).html(review_data["user"])
 	$(date).html(review_data["date"])
 	$(content).html(review_data["review_text"])
+	$(thumbs_up).html("thumb_up")
+	$(likes).html(review_data["thumbs_up"])
+	$(thumbs_down).html("thumb_down")
+	$(dislikes).html(review_data["thumbs_down"])
 
-
+	for(let j = 0; j < review_data["stars"]; j++){
+		var fstar = $("<div class='material-symbols-outlined' id='filled-star'>")
+		$(fstar).html("star")
+		$(stars).append(fstar)
+	}
+	for(let j = 0; j < 5-review_data["stars"]; j++){
+		var estar = $("<div class='material-symbols-outlined'>")
+		$(estar).html("star")
+		$(stars).append(estar)
+	}
 	$(review_upper).append(name)
+	$(review_upper).append(stars)
 	$(review_upper).append(date)
+	$(likes_div).append(likes)
+	$(likes_div).append(thumbs_up)
+	$(likes_div).append(dislikes)
+	$(likes_div).append(thumbs_down)
 	$(single_review).append(review_upper)
 	$(single_review).append(content)
+	$(single_review).append(likes_div)
 	$(side_review).append(single_review)
 	$(review_pair_container).append(side_review)
 

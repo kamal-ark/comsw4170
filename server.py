@@ -23,7 +23,7 @@ reviews_data = [
 	"stars": "3",
 	"thumbs_up": "2",
 	"thumbs_down": "26",
-	"review_text": "this room is equipped with video recording capabilities and my professor was amenable to my need for... [more]"
+	"review_text": "this room is equipped with video recording capabilities and my professor was amenable to my need for... "
 },
 
 {
@@ -33,7 +33,7 @@ reviews_data = [
 	"stars": "2",
 	"thumbs_up": "24",
 	"thumbs_down": "3",
-	"review_text": "we had in class activities and i could not get around the classroom because of all the stairs so that made... [more]"
+	"review_text": "we had in class activities and i could not get around the classroom because of all the stairs so that made... "
 },
 
 {
@@ -64,7 +64,7 @@ reviews_data = [
 	"stars": "1",
 	"thumbs_up": "12",
 	"thumbs_down": "0",
-	"review_text": "to get in with my wheelchair i needed to go down the elevator to the 4th floor and then ask someon... [more]"
+	"review_text": "to get in with my wheelchair i needed to go down the elevator to the 4th floor and then ask someon... "
 },
 
 {
