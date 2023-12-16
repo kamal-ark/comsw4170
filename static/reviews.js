@@ -97,37 +97,26 @@ function renderReview(review_data, is_right, review_pair_container, is_final) {
 		return review_pair_container
 }
 
-
-/*            <div class="reviews-pair-container">
-                <span class="left-review">
-                    <div class="single-review-container">
-                        <div class="single-review-container-upper">
-                            <span class="username">
-                                AviramRah
-                            </span>
-                            <span class="review-stars-container">
-                                <div class="material-symbols-outlined" id="filled-star">star</div>
-                                <div class="material-symbols-outlined">star</div>
-                                <div class="material-symbols-outlined">star</div>
-                                <div class="material-symbols-outlined">star</div>
-                                <div class="material-symbols-outlined">star</div>
-                            </span>
-                            <span class="date">oct 12, 2023</span>
-                        </div>
-                        <div class="review-content">
-                            the desks were way too small for me. I had a hard time getting in and out of them.
-                        </div>
-                        <div class="likes-container">
-                            <span class="like-num">18</span>
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span class="like-num">4</span>
-                            <span class="material-symbols-outlined">thumb_down</span>
-                        </div>
-                    </div>
-                </span>
-*/
-
-$(document).ready(function(){
-
+$(document).ready(function () {
 	renderReviews(reviews_data);
-})
+  
+	$("#reviews-list").on("click", ".material-symbols-outlined", function () {
+	  var reviewContainer = $(this).closest(".single-review-container");
+  
+	  var thumbsUpCount = reviewContainer.find(".like-num:first");
+	  var thumbsDownCount = reviewContainer.find(".like-num:last");
+  
+	  if ($(this).html() === "thumb_up") {
+		var currentCount = parseInt(thumbsUpCount.html());
+		thumbsUpCount.html(currentCount + 1);
+	  } else if ($(this).html() === "thumb_down") {
+		var currentCount = parseInt(thumbsDownCount.html());
+		thumbsDownCount.html(currentCount + 1);
+	  }
+	});
+	$("#reviews-list").on("mouseenter", ".material-symbols-outlined", function () {
+		$(this).css("color", "#cccdce");
+	  }).on("mouseleave", ".material-symbols-outlined", function () {
+		$(this).css("color", "");
+	  });
+  });
