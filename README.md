@@ -18,8 +18,8 @@ http://127.0.0.1:5000 is the address to view the pages of the webapp
 List of pages available
  
  - http://127.0.0.1:5000/home Home screen
- - http://127.0.0.1:5000/room Full room review page, with access details
- - http://127.0.0.1:5000/review Single review display
+ - http://127.0.0.1:5000/room (...2)Full room review page, with access details
+ - http://127.0.0.1:5000/review (...2) Single review display
  - http://127.0.0.1:5000/addreview Add a room review and access details
  - http://127.0.0.1:5000/allreviews All reviews of a single room displayed
 
