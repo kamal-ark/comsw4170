@@ -262,6 +262,15 @@ Last updated: 12/5/23-->
             margin-left: 10px;
         }
 
+        .material-symbols-outlined {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .material-symbols-outlined:hover {
+            color: #cccdce;
+        }
+
         .back-button {
         border-radius: 30px;
         width: 100px;
@@ -386,11 +395,11 @@ Last updated: 12/5/23-->
                             this room is equipped with video recording capabilities and my professor was amenable to my need for good lecture recordings on days where I had to go to infusion therapy. but I still had a hard time with the physical layout of the room on the days I did come in for class.
                         </div>
                         <div class="likes-container">
-                            <span class="like-num">26</span>
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span class="like-num">2</span>
-                            <span class="material-symbols-outlined">thumb_down</span>
-                        </div>
+                            <span class="like-num" id="thumbsUpCount">18</span>
+                            <span class="material-symbols-outlined" onclick="updateCount('thumbsUpCount', 'up')">thumb_up</span>
+                            <span class="like-num" id="thumbsDownCount">4</span>
+                            <span class="material-symbols-outlined" onclick="updateCount('thumbsDownCount', 'down')">thumb_down</span>
+                          </div>
                     </div>
                 </div>
                 <div class="access-rating-text">
@@ -420,6 +429,19 @@ Last updated: 12/5/23-->
             var newPageUrl = 'http://127.0.0.1:5000/home';
             window.location.href = newPageUrl;
         });
+
+        function updateCount(elementId, action) {
+            var countElement = document.getElementById(elementId);
+            var count = parseInt(countElement.textContent);
+
+            if (action === 'up') {
+                count++;
+            } else if (action === 'down') {
+                count--;
+            }
+
+            countElement.textContent = count;
+        }
     </script>
 </body>
 </html>

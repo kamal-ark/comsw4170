@@ -263,6 +263,15 @@ Last updated: 12/5/23-->
             margin-left: 10px;
         }
 
+        .material-symbols-outlined {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .material-symbols-outlined:hover {
+            color: #cccdce;
+        }
+
         .back-button {
         border-radius: 30px;
         width: 100px;
@@ -390,11 +399,11 @@ Last updated: 12/5/23-->
                             To get in with my wheelchair i needed to go down the elevator to the 4th floor and then ask someone to open the double doors to the lecture hall for me because I couldn’t get them open myself. While there were places for me to sit on the top and bottom rows of the lecture hall, the spaces were not clearly marked and far from where everyone else was sitting. I didn’t like it.
                         </div>
                         <div class="likes-container">
-                            <span class="like-num">18</span>
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span class="like-num">4</span>
-                            <span class="material-symbols-outlined">thumb_down</span>
-                        </div>
+                            <span class="like-num" id="thumbsUpCount">18</span>
+                            <span class="material-symbols-outlined" onclick="updateCount('thumbsUpCount', 'up')">thumb_up</span>
+                            <span class="like-num" id="thumbsDownCount">4</span>
+                            <span class="material-symbols-outlined" onclick="updateCount('thumbsDownCount', 'down')">thumb_down</span>
+                          </div>
                     </div>
                 </div>
                 <div class="access-rating-text">
@@ -424,6 +433,19 @@ Last updated: 12/5/23-->
             var newPageUrl = 'http://127.0.0.1:5000/home';
             window.location.href = newPageUrl;
         });
+
+        function updateCount(elementId, action) {
+            var countElement = document.getElementById(elementId);
+            var count = parseInt(countElement.textContent);
+
+            if (action === 'up') {
+                count++;
+            } else if (action === 'down') {
+                count--;
+            }
+
+            countElement.textContent = count;
+        }
     </script>
 </body>
 </html>
