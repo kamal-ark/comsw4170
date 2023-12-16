@@ -374,6 +374,9 @@ Last updated: 12/15/23-->
             background: #f4f4f9;
             box-shadow: inset 0 0 8px #d2d3e3;
         } 
+        .material-symbols-outlined:hover {
+            color: #cccdce;
+        }
 
 
     </style>
@@ -507,10 +510,10 @@ Last updated: 12/15/23-->
                         this room is equipped with video recording capabilities andmy professor was amenable to my need for... [<a href="/review2">more</a>]
                     </div>
                     <div class="likes-container">
-                        <span class="like-num">26</span>
-                        <span class="material-symbols-outlined">thumb_up</span>
-                        <span class="like-num">2</span>
-                        <span class="material-symbols-outlined">thumb_down</span>
+                        <span class="like-num" id="thumbsUpCount">26</span>
+                        <span class="material-symbols-outlined" onclick="updateCount('thumbsUpCount', 'up')">thumb_up</span>
+                        <span class="like-num" id="thumbsDownCount">2</span>
+                        <span class="material-symbols-outlined" onclick="updateCount('thumbsDownCount', 'down')">thumb_down</span>
                     </div>
                 </div>
                 <div class="single-review-container">
@@ -531,10 +534,10 @@ Last updated: 12/15/23-->
                         Honestly, the room was pretty solid. The seats were tiny, but overall, it was okay.
                     </div>
                     <div class="likes-container">
-                        <span class="like-num">25</span>
-                        <span class="material-symbols-outlined">thumb_up</span>
-                        <span class="like-num">1</span>
-                        <span class="material-symbols-outlined">thumb_down</span>
+                        <span class="like-num" id="thumbsUpCount2">25</span>
+                        <span class="material-symbols-outlined" onclick="updateCount('thumbsUpCount2', 'up')">thumb_up</span>
+                        <span class="like-num" id="thumbsDownCount2">1</span>
+                        <span class="material-symbols-outlined" onclick="updateCount('thumbsDownCount2', 'down')">thumb_down</span>
                     </div>
                 </div>
                 <div class="add-review-button" id="reviewButton">
@@ -557,6 +560,18 @@ Last updated: 12/15/23-->
             var newPageUrl = 'https://www.health.columbia.edu/services/register-disability-services';
             window.location.href = newPageUrl;
         });
+        function updateCount(elementId, action) {
+            var countElement = document.getElementById(elementId);
+            var count = parseInt(countElement.textContent);
+
+            if (action === 'up') {
+                count++;
+            } else if (action === 'down') {
+                count--;
+            }
+
+            countElement.textContent = count;
+        }
     </script>
 </body>
 </html>
