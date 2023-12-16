@@ -76,7 +76,9 @@ Last updated: 11/17/23-->
         }
 
         .home{
-            margin: 10px;
+            padding: 10px;
+            text-decoration: none;
+            color: #4F5D68
         }
 
         .about{
@@ -364,7 +366,7 @@ Last updated: 11/17/23-->
 <body>
     <div class="title-container">
         <div class="menu">
-            <span class="home">Home</span>
+            <a href="http://127.0.0.1:5000/home" class="home">Home</a>
             <span class="about">About</span>
             <span class="material-symbols-outlined" id="menu-button">menu</span>
         </div>
@@ -519,7 +521,6 @@ Last updated: 11/17/23-->
             var experienceText = document.getElementById('experience').value;
             var displayName = document.getElementById('displayName').value;
             // NEED TO ADD LOGIC HERE
-            alert("Experience: " + experienceText + "\nDisplay Name: " + displayName);
         }
 
         document.addEventListener('DOMContentLoaded', function () {
