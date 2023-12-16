@@ -27,7 +27,7 @@ function renderReviews(reviews_data) {
 		renderReview([], true, pair_container, true)
 	}
 
-	alert("no probs")
+	//alert("no probs")
 }
 
 // is_right is a Boolean value for displaying in the right handside

@@ -153,13 +153,16 @@ def allreviews():
 
 @app.route('/post_review', methods=['GET','POST'])
 def post_review():
-	print(request.get_json())
 	global reviews_data
 	global current_id
 
 	review_json = request.get_json()
 	review_text = review_json["review_text"]
 	user = review_json["user"]
+	date = review_json["date"]
+	stars = review_json["stars"]
+	thumbs_up = review_json["thumbs_up"]
+	thumbs_down = review_json["thumbs_down"]
 
 
 	current_id += 1
@@ -167,6 +170,10 @@ def post_review():
 	new_review = {
 		"id": current_id,
 		"user": user,
+		"date": date,
+		"stars": stars,
+		"thumbs_up": thumbs_up,
+		"thumbs_down": thumbs_down,
 		"review_text": review_text,
 	}
 	reviews_data.append(new_review)
