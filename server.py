@@ -131,6 +131,10 @@ def homepage():
 def reviewpage():
 	return render_template('single_room_review.html')
 
+@app.route('/review2')
+def reviewpage2():
+	return render_template('single_room_review_2.html')
+
 @app.route('/room')
 def roompage():
 	return render_template('room_info_page.html')

@@ -394,7 +394,7 @@ Last updated: 12/5/23-->
                 </span>
             </div>
         </div>
-        <div class="back-button" id="allReviewButton">
+        <div class="back-button" id="backButton">
             <span class="material-symbols-outlined">keyboard_backspace</span>
         </div>
     </div>
@@ -405,8 +405,8 @@ Last updated: 12/5/23-->
             window.location.href = newPageUrl;
         });
 
-        document.getElementById('allReviewButton').addEventListener('click', function() {
-            var newPageUrl = 'http://127.0.0.1:5000/allreviews';
+        document.getElementById('backButton').addEventListener('click', function() {
+            var newPageUrl = 'http://127.0.0.1:5000/home';
             window.location.href = newPageUrl;
         });
     </script>
