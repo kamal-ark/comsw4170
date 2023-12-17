@@ -71,11 +71,20 @@ Last updated: 12/15/23-->
             align-items: center;
             text-transform: uppercase;
         }
-        .room-name{
+        .room-name {
             margin-left: 50px;
             font-family: Lilita One;
             color: #F4F4F4;
             font-size: 36px;
+        }
+
+        .room-name a {
+            text-decoration: none;
+            color: #F4F4F4;
+        }
+
+        .room-name a:hover {
+            color: #cccdce;
         }
         .access-features{
             margin-top: 10px;
@@ -317,7 +326,9 @@ Last updated: 12/15/23-->
     </div>
     <div class="header">
         <div class="room-name">
-            Pupin 428
+            <a href="http://127.0.0.1:5000/room" class="room-link">
+                Pupin 428
+            </a>
         </div>
         <div class="stars-container">
             <div class="material-symbols-outlined" id="filled-star">star</div>
