@@ -111,7 +111,7 @@ $(document).ready(function () {
 		thumbsUpCount.html(currentCount + 1);
 	  } else if ($(this).html() === "thumb_down") {
 		var currentCount = parseInt(thumbsDownCount.html());
-		thumbsDownCount.html(currentCount - 1);
+		thumbsDownCount.html(currentCount + 1);
 	  }
 	});
 	$("#reviews-list").on("mouseenter", ".material-symbols-outlined", function () {
