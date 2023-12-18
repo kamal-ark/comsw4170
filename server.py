@@ -102,7 +102,7 @@ reviews_data = [
 {
 	"id": 8,
 	"user": "AviViva",
-	"date": "dec. 23rd, 2023",
+	"date": "dec. 15th, 2023",
 	"stars": "5",
 	"thumbs_up": "24",
 	"thumbs_down": "1",
@@ -112,7 +112,7 @@ reviews_data = [
 {
 	"id": 9,
 	"user": "FloKi",
-	"date": "dec. 24th, 2023",
+	"date": "dec. 17th, 2023",
 	"stars": "4",
 	"thumbs_up": "18",
 	"thumbs_down": "0",
