@@ -203,13 +203,72 @@ Last updated: 12/15/23-->
         }
 
         .dropdown_bg{
-            background-image: url("{{url_for('static', filename='rsz_dropbar.png')}}");
+            background-image: url("{{url_for('static', filename='empty-bar-light-bg.png')}}");
             background-size: 500px;
             width: 500px;
             height: 45px;
             border: none;
             border-radius: 40px;
+            padding-bottom: 0px;
+            text-align: left;
+            font-size: 18px;
         }
+
+        .dropdown-button1 {
+            color: #aeaeaf;
+            padding: 7.5px;
+            margin: 5px;
+            margin-left: 75px;
+            background-color: #fefefe;
+            width: 450px;
+            font-size: 12px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .menu-name {
+            font-size: 18px;
+            font-weight: 200;
+            color: #6d757d;
+            text-align: left;
+            padding-left: 25px;
+            margin-bottom: -2px;
+        }
+
+        .building-name {
+            font-weight: bold;
+        }
+
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-top: 0.5px;
+            margin-left: 25px;
+            background-color: #6d757d;
+            width: 450px;
+            z-index: 2;
+        }
+
+        .dropdown-content1 a {
+            text-decoration: none;
+            color: #fefeef;
+            display: block;
+            margin: 2px;
+            padding: 13px;
+            padding-bottom: 3px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .dropdown-content1 a:hover {
+            background-color: #4F5D68;
+        }
+
+        .dropdown1:hover .dropdown-content1 {display: block;}
 
 
          ::-webkit-scrollbar {
@@ -363,8 +422,29 @@ Last updated: 12/15/23-->
                 <span class="dropdown-desc">
                 Sort By: 
                 </span>
-                <button class="dropdown_bg">
-                </button>
+                <div class="dropdown1">
+                    <button class="dropdown_bg" >  <div class="menu-name"  id="dropdown-id1">most recent</div> </button>
+                    <div class="dropdown-content1">
+                        <a value="most recent" onclick="emptyDropdownBar1(this)"> 
+                            <span class="building-name"> most recent </span>
+                        </a>
+                        <a value="least recent" onclick="emptyDropdownBar1(this)"> 
+                            <span class="building-name"> least recent </span>
+                        </a>
+                        <a value="most liked" onclick="emptyDropdownBar1(this)"> 
+                            <span class="building-name"> most liked </span>
+                        </a>
+                        <a value="least liked" onclick="emptyDropdownBar1(this)"> 
+                            <span class="building-name"> least liked </span>
+                        </a>
+                        <a value="highest rating" onclick="emptyDropdownBar1(this)"> 
+                            <span class="building-name"> highest rating </span>
+                        </a>
+                        <a value="lowest rating" onclick="emptyDropdownBar1(this)"> 
+                            <span class="building-name"> lowest rating </span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="reviews-list-container" id="reviews-list">
@@ -377,6 +457,24 @@ Last updated: 12/15/23-->
             var newPageUrl = 'http://127.0.0.1:5000/addreview';
             window.location.href = newPageUrl;
         });
+
+        function emptyDropdownBar1(elem) {
+            var dropDownButton1 = document.getElementById("dropdown-id1");
+            sort_value = elem.getAttribute("value");
+            dropDownButton1.innerText = sort_value;
+            if("least recent" === sort_value){
+                // Sort normally
+                renderReviews(reviews_data, false);
+                //var newPageUrl = 'http://127.0.0.1:5000/sortreview1';
+                //window.location.href = newPageUrl;
+            }
+            else if("most recent" === sort_value){
+                // Sort normally but in reverse order
+                renderReviews(reviews_data, true);
+                //var newPageUrl = 'http://127.0.0.1:5000/sortreview2';
+                //window.location.href = newPageUrl;
+            }
+        }
     </script>
 </body>
 </html>

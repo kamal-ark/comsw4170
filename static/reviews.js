@@ -1,9 +1,8 @@
 
-function renderReviews(reviews_data) {
+function renderReviews(reviews_data, reverse_order) {
 	$("#reviews-list").empty()
 
 	var data_len = reviews_data.length
-	var reverse_order = true
 	var i = 0
 
 	for(j = 0; j<data_len; j++){
@@ -98,7 +97,7 @@ function renderReview(review_data, is_right, review_pair_container, is_final) {
 }
 
 $(document).ready(function () {
-	renderReviews(reviews_data);
+	renderReviews(reviews_data, true);
   
 	$("#reviews-list").on("click", ".material-symbols-outlined", function () {
 	  var reviewContainer = $(this).closest(".single-review-container");
