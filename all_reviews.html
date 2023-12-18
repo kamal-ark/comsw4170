@@ -464,13 +464,37 @@ Last updated: 12/15/23-->
             dropDownButton1.innerText = sort_value;
             if("least recent" === sort_value){
                 // Sort normally
-                renderReviews(reviews_data, false);
+                renderReviews(reviews_data, false, false, false);
                 //var newPageUrl = 'http://127.0.0.1:5000/sortreview1';
                 //window.location.href = newPageUrl;
             }
             else if("most recent" === sort_value){
                 // Sort normally but in reverse order
-                renderReviews(reviews_data, true);
+                renderReviews(reviews_data, true, false, false);
+                //var newPageUrl = 'http://127.0.0.1:5000/sortreview2';
+                //window.location.href = newPageUrl;
+            }
+            else if("least liked" === sort_value){
+                // Sort normally but in reverse order
+                renderReviews(reviews_data, false, false, true);
+                //var newPageUrl = 'http://127.0.0.1:5000/sortreview2';
+                //window.location.href = newPageUrl;
+            }
+            else if("most liked" === sort_value){
+                // Sort normally but in reverse order
+                renderReviews(reviews_data, true, false, true);
+                //var newPageUrl = 'http://127.0.0.1:5000/sortreview2';
+                //window.location.href = newPageUrl;
+            }
+            else if("lowest rating" === sort_value){
+                // Sort normally but in reverse order
+                renderReviews(reviews_data, false, true, false);
+                //var newPageUrl = 'http://127.0.0.1:5000/sortreview2';
+                //window.location.href = newPageUrl;
+            }
+            else if("highest rating" === sort_value){
+                // Sort normally but in reverse order
+                renderReviews(reviews_data, true, true, false);
                 //var newPageUrl = 'http://127.0.0.1:5000/sortreview2';
                 //window.location.href = newPageUrl;
             }

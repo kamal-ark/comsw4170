@@ -1,17 +1,41 @@
 
-function renderReviews(reviews_data, reverse_order) {
+function renderReviews(reviews_data, reverse_order, sort_stars, sort_thumbsup) {
 	$("#reviews-list").empty()
 
 	var data_len = reviews_data.length
-	var i = 0
+
+	var indices = new Array(data_len);
+	for (var ind = 0; ind < data_len; ++ind) indices[ind] = ind;
+
+
+	// Sort if needed
+	if(sort_stars || sort_thumbsup){
+		sort_param = "thumbs_up"
+		if(sort_stars)
+			sort_param = "stars"
+		indices.sort(
+			function (a, b) { 
+				a1 = reviews_data[a][sort_param];
+				b1 = reviews_data[b][sort_param];
+				a1 = parseInt(a1)
+				b1 = parseInt(b1)
+
+				return a1<b1 ? -1 :  a1>b1 ? 1 : 0; 
+			}
+		);
+	}
+
+	// Reverse indices if needed
+	if(reverse_order) indices.reverse()
+
+	/*alert(sort_stars)
+	alert(sort_thumbsup)
+	alert(reverse_order)*/
 
 	for(j = 0; j<data_len; j++){
 		// Add two reviews each to a review pair container
-		if(reverse_order)
-			i = data_len-j-1
-		else
-			i = j
-		review_data = reviews_data[i]
+		review_i = indices[j]
+		review_data = reviews_data[review_i]
 		if((j % 2) == 1){
 			renderReview(review_data, true, pair_container, false)
 			//alert(review_data['user'])
@@ -97,7 +121,7 @@ function renderReview(review_data, is_right, review_pair_container, is_final) {
 }
 
 $(document).ready(function () {
-	renderReviews(reviews_data, true);
+	renderReviews(reviews_data, true, false, false);
   
 	$("#reviews-list").on("click", ".material-symbols-outlined", function () {
 	  var reviewContainer = $(this).closest(".single-review-container");
