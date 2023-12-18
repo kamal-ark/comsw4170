@@ -38,7 +38,7 @@ setting the 'template_home' to be the home directory in the repository.
 - [review_add.html](https://github.com/kamal-ark/comsw4170/blob/main/review_add.html): Page for input entry of room review and access characteristics
 - [classroom_image.html](https://github.com/kamal-ark/comsw4170/blob/main/classroom_image.html): Classroom image display page
 - [room_info_page.html](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page_2.html)): The main review page with all access details and selected top reviews
-- [single_room_review.html](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review_2.html), [3](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review_3)): Page with a single review of a room, with full details
+- [single_room_review.html](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review_2.html), [3](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review_3.html)): Page with a single review of a room, with full details
 - [all_reviews.html](https://github.com/kamal-ark/comsw4170/blob/main/all_reviews.html): Page with all reviews of a specific room, with a scrollbar
 - [reviews.js](https://github.com/kamal-ark/comsw4170/blob/main/static/reviews.js): JS script used to render reviews on all reviews page
 - [campus_map.png](https://github.com/kamal-ark/comsw4170/blob/main/static/campus_map.png): Campus map image (from earlier prototypes)
