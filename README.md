@@ -38,13 +38,13 @@ setting the 'template_home' to be the home directory in the repository.
 - [review_add.html](https://github.com/kamal-ark/comsw4170/blob/main/review_add.html): Page for input entry of room review and access characteristics
 - [classroom_image.html](https://github.com/kamal-ark/comsw4170/blob/main/classroom_image.html): Classroom image display page
 - [room_info_page.html](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page_2.html)): The main review page with all access details and selected top reviews
-- [single_room_review.html](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page_2.html), [3](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page_3)): Page with a single review of a room, with full details
+- [single_room_review.html](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review_2.html), [3](https://github.com/kamal-ark/comsw4170/blob/main/single_room_review_3)): Page with a single review of a room, with full details
 - [all_reviews.html](https://github.com/kamal-ark/comsw4170/blob/main/all_reviews.html): Page with all reviews of a specific room, with a scrollbar
 - [reviews.js](https://github.com/kamal-ark/comsw4170/blob/main/static/reviews.js): JS script used to render reviews on all reviews page
-- [campus_map.png](https://github.com/kamal-ark/comsw4170/blob/main/campus_map.png): Campus map image (from earlier prototypes)
+- [campus_map.png](https://github.com/kamal-ark/comsw4170/blob/main/static/campus_map.png): Campus map image (from earlier prototypes)
 - [static/rsz_dropbar.png](https://github.com/kamal-ark/comsw4170/blob/main/static/rsz_dropbar.png): Sort option dropdown bar (resized already for faster loading time)
 - [static/room_dropbar.png](https://github.com/kamal-ark/comsw4170/blob/main/static/room-bar.png): Select room dropdown image  
-- [static/blg_dropbar.png](): Select building dropdown image
+- [static/blg_dropbar.png](https://github.com/kamal-ark/comsw4170/blob/main/static/sbg-bar.png): Select building dropdown image
 - [static/sbg-bar.png](https://github.com/kamal-ark/comsw4170/blob/main/static/blg-bar.png): Dark background with shading, for the slider with texts
-- [pupin428_2.jpg](https://github.com/kamal-ark/comsw4170/blob/main/pupin428_2.jpg): image of classroom used in classroom_image.html
+- [pupin428_2.jpg](https://github.com/kamal-ark/comsw4170/blob/main/static/pupin428_2.jpg): image of classroom used in classroom_image.html
 - README.md: This readme file
