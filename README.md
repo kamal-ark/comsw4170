@@ -33,32 +33,18 @@ setting the 'template_home' to be the home directory in the repository.
 
 ***Files***
 
-- [sever.py]([http://www.google.fr/](https://github.com/kamal-ark/comsw4170/blob/main/server.py)
-  Flask server for serving the endpoints with the HTML/CSS we)bpages
-- homepage.html  
-  Home page of the CU Access webapp  
-  (this page includes an embedded, custom, dynamic map of the Columbia University Morningside Campus created using Google Maps. In lieu of a backend implementation connecting the map to the application at this stage, we used Google Maps' to include building access characteristics and a link to our review page, which is accessible when our Flask server is running)
-- review_add.html  
-  Page for input entry of room review and access characteristics
-- classroom_image.html
-  Classroom image display page
-- room_info_page.html  (..2)
-  The main review page with all access details and selected top reviews
-- single_room_review.html  (..2, 3)
-  Page with a single review of a room, with full details
-- all_reviews.html  
-  Page with all reviews of a specific room, with a scrollbar
-- campus_map.png  
-  Campus map image (from earlier prototypes)
-- static/rsz_dropbar.png  
-  Sort option dropdown bar (resized already for faster loading time)
-- static/room_dropbar.png  
-  Select room dropdown image  
-- static/blg_dropbar.png  
-  Select building dropdown image
-- static/sbg-bar.png  
-  Dark background with shading, for the slider with texts
-  - pupin428_2.jpg
-    image of classroom used in classroom_image.html
-- README.md  
-  This readme file
+- [sever.py](https://github.com/kamal-ark/comsw4170/blob/main/server.py): Flask server for serving the endpoints with the HTML/CSS we)bpages
+- [homepage.html](https://github.com/kamal-ark/comsw4170/blob/main/homepage.html):Home page of the CU Access webapp (this page includes an embedded, custom, dynamic map of the Columbia University Morningside Campus created using Google Maps. In lieu of a backend implementation connecting the map to the application at this stage, we used Google Maps' to include building access characteristics and a link to our review page, which is accessible when our Flask server is running)
+- [review_add.html](https://github.com/kamal-ark/comsw4170/blob/main/review_add.html): Page for input entry of room review and access characteristics
+- [classroom_image.html](https://github.com/kamal-ark/comsw4170/blob/main/classroom_image.html): Classroom image display page
+- [room_info_page.html](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page.html)  (..[2](https://github.com/kamal-ark/comsw4170/blob/main/room_info_page_2.html)): The main review page with all access details and selected top reviews
+- [single_room_review.html]()  (..[2](), [3]()): Page with a single review of a room, with full details
+- [all_reviews.html](https://github.com/kamal-ark/comsw4170/blob/main/all_reviews.html): Page with all reviews of a specific room, with a scrollbar
+- [reviews.js](https://github.com/kamal-ark/comsw4170/blob/main/static/reviews.js): JS script used to render reviews on all reviews page
+- [campus_map.png](): Campus map image (from earlier prototypes)
+- [static/rsz_dropbar.png](): Sort option dropdown bar (resized already for faster loading time)
+- [static/room_dropbar.png](): Select room dropdown image  
+- [static/blg_dropbar.png](): Select building dropdown image
+- [static/sbg-bar.png](): Dark background with shading, for the slider with texts
+- [pupin428_2.jpg](): image of classroom used in classroom_image.html
+- README.md: This readme file
